@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+const { data: content } = await useAsyncData("home", () =>
+  queryContent("/").findOne()
+);
+</script>
 
 <template>
   <div>
@@ -8,25 +12,14 @@
           <h1
             class="mt-1 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
           >
-            Hello, I'm Roger
+            {{ content.title }}
           </h1>
-
-          <div class="content mx-auto mt-5 mb-8 max-w-xl text-xl">
-            I am a Frontend Developer at <a href="https://www.advery.ch/">Advery</a> and <a href="https://www.brueggli-medien.ch/">Brüggli Medien</a>. <br> I like to build things.
+          <div class="content mx-auto mt-5 mb-8 max-w-xl text-2xl">
+            <ContentDoc />
           </div>
-
           <div class="flex justify-evenly"><Socials /></div>
         </div>
       </div>
     </div>
   </div>
 </template>
-
-<style>
-.hero-body {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 400px;
-}
-</style>

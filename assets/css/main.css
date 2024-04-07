@@ -23,7 +23,7 @@
   }
 
   p {
-    @apply font-sans text-base  font-light lg:text-lg;
+    @apply font-sans text-xl  font-light lg:text-lg;
   }
 
   h6 {

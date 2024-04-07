@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: "the rkiller",
+  title: "the rkiller.dev",
   link: [],
 });
 </script>
