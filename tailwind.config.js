@@ -24,7 +24,6 @@ export default {
           800: "#06314C",
           900: "#0E0E43",
         },
-        dwhite: "#FFFFFF",
       },
     },
     container: {

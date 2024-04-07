@@ -21,6 +21,9 @@
   * {
     @apply font-sans text-base font-light lg:text-lg;
   }
+  a {
+    @apply underline hover:text-primary-400;
+  }
 }
 
 @layer components {

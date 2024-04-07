@@ -13,7 +13,7 @@ const { data: content } = await useAsyncData("home", () =>
             {{ content.title }}
           </h1>
           <div class="mx-auto mt-5 mb-8 max-w-2xl">
-            <ContentDoc class="prose prose-p:text-2xl text-white prose-a:text-white prose-a:text-2xl prose-a:hover:text-opacity-75"/>
+            <ContentDoc class="text-white a:underline"/>
           </div>
           <div class="flex justify-evenly"><Socials /></div>
         </div>
