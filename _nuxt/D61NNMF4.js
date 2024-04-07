@@ -1,0 +1,1 @@
+import{_ as t}from"./lPwJs2TI.js";import{_ as o}from"./DlAUqK2U.js";import{c as n,g as r,w as c,b as _,j as a}from"./DHyHduax.js";const s={};function l(m,f){const e=t;return _(),n("main",null,[r(e,null,{default:c(()=>[a(" A Nuxt Content v2 Blog for the rkiller")]),_:1})])}const x=o(s,[["render",l]]);export{x as default};
