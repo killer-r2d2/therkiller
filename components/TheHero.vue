@@ -15,7 +15,8 @@ const { data: content } = await useAsyncData("home", () =>
           <div class="mx-auto mt-5 mb-8 max-w-2xl">
             <ContentDoc class="text-white a:underline"/>
           </div>
-          <div class="flex justify-evenly"><Socials /></div>
+          <div class="flex justify-evenly mb-8"><Socials /></div>
+          <div><Logos/></div>
         </div>
       </div>
     </div>
