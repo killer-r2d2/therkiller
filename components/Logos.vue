@@ -33,11 +33,6 @@
             <LogoSupabase />
           </NuxtLink>
         </div>
-        <!-- <div class="bg-white/5 p-6 sm:p-10">
-          <NuxtLink to="/" class="max-h-12 w-full object-contain">
-            <LogoNodeJs />
-          </NuxtLink>
-        </div> -->
       </div>
     </div>
 </template>
