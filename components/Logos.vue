@@ -2,7 +2,7 @@
 </script>
 <template>
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="-mx-6 grid grid-cols-2 gap-0.5 overflow-hidden sm:mx-0 sm:rounded-2xl md:grid-cols-3">
+      <div class="-mx-6 grid grid-cols-1 sm:grid-cols-2 gap-0.5 overflow-hidden sm:mx-0 sm:rounded-2xl md:grid-cols-3">
         <div class="bg-white/5 p-8 sm:p-10">
           <NuxtLink to="https://nuxt.com/" target="_blank" class="max-h-12 w-full object-contain">
             <LogoNuxt />
