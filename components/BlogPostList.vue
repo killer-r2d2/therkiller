@@ -1,13 +1,13 @@
 <script setup>
-const { data: blogPostList } = useAsyncData('blogPostList', () => {
-  return queryContent('/blog').find()
-})
+const { data: blogPostList } = useAsyncData("blogPostList", () => {
+  return queryContent("/blog").find();
+});
 </script>
 
 <template>
-  <div class="container">
-    <section class="articles">
-      <div class="column is-8 is-offset-2">
+  <BaseSection>
+    <BaseContainer>
+      <div class="flex flex-col md:flex-row justify-between">
         <div
           v-for="blogPost in blogPostList"
           :key="blogPost._path"
@@ -20,23 +20,22 @@ const { data: blogPostList } = useAsyncData('blogPostList', () => {
                   <h3 class="title article-title has-text-weight-bold">
                     {{ blogPost.title }}
                   </h3>
-                  <BlogPostMeta
-                    :author="blogPost.author"
-                    :date="blogPost.dates.published"
-                  />
-                </div>
-              </div>
-              <div class="card-content">
-                <div class="content article-body is-size-5">
-                  {{ blogPost.description }}
+                  <!-- if there is an image, render the image -->
+                  <div v-if="blogPost.image" class="image is-16by9">
+                    <img
+                      :src="blogPost.image"
+                      :alt="blogPost.title"
+                      class="object-cover"
+                    />
+                  </div>
                 </div>
               </div>
             </section>
           </NuxtLink>
         </div>
       </div>
-    </section>
-  </div>
+    </BaseContainer>
+  </BaseSection>
 </template>
 
 <style>

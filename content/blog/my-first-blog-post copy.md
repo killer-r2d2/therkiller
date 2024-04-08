@@ -23,6 +23,14 @@ And **bold**, _italics_.
 
 [A link](https://markdowntohtml.com)
 
-<!-- add image -->
+And code highlighting:
 
-![Description of image](rctritec_ipad.jpg "Title of your image")
+```js
+var foo = 'bar';
+
+function baz(s) {
+   return foo + ':' + s;
+}
+```
+
+The end ...

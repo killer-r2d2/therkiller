@@ -5,8 +5,6 @@ const { data: content } = await useAsyncData("home", () =>
 </script>
 
 <template>
-  <div>
-    <div class="grid place-items-center" id="header">
       <BaseSection>
         <BaseContainer>
           <div class="text-center">
@@ -19,10 +17,7 @@ const { data: content } = await useAsyncData("home", () =>
               <ContentDoc class="text-white a:underline" />
             </div>
             <div class="flex justify-center gap-x-4 mb-8"><Socials /></div>
-            <div><Logos /></div>
           </div>
         </BaseContainer>
       </BaseSection>
-    </div>
-  </div>
 </template>
