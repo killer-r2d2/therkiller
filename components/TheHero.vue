@@ -6,7 +6,7 @@ const { data: content } = await useAsyncData("home", () =>
 
 <template>
   <div>
-    <div class="grid h-screen place-items-center" id="header">
+    <div class="grid place-items-center" id="header">
       <BaseSection>
         <BaseContainer>
           <div class="text-center">
