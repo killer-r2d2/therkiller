@@ -19,13 +19,12 @@ const formatDate = (date) => {
   <BaseSection>
     <BaseContainer>
       <div
-        class="flex flex-col md:flex-row justify-between gap-8 md:grid md:grid-cols-3"
+        class="flex flex-col md:flex-row justify-between gap-12 md:grid md:grid-cols-3"
       >
         <div v-for="blogPost in blogPostList" :key="blogPost._path" class="">
-          <NuxtLink :to="blogPost._path" class="no-underline">
-            <div class="">
+          <NuxtLink :to="blogPost._path" class="no-underline group">
               <div class="">
-                <div class="flex justify-between mb-2">
+                <div class="flex justify-between mb-2 group-hover:text-primary-400 transition-all ease-in-out delay-150">
                   <h3>
                     {{ blogPost.title }}
                   </h3>
@@ -33,18 +32,17 @@ const formatDate = (date) => {
                     {{ formatDate(blogPost.dates.published) }}
                   </p>
                 </div>
-                <div v-if="blogPost.image" class="aspect-square mb-2">
+                <div v-if="blogPost.image" class="aspect-[5/3] mb-2">
                   <img
                     :src="blogPost.image"
                     :alt="blogPost.title"
                     class="object-cover h-full w-full"
                   />
                 </div>
-                <p>
+                <p class="group-hover:text-white">
                   {{ blogPost.description }}
                 </p>
               </div>
-            </div>
           </NuxtLink>
         </div>
       </div>
