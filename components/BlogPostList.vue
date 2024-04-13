@@ -7,17 +7,17 @@ const { data: blogPostList } = useAsyncData("blogPostList", () => {
 <template>
   <BaseSection>
     <BaseContainer>
-      <div class="flex flex-col md:flex-row justify-between gap-8">
+      <div class="flex flex-col md:flex-row justify-between gap-8 md:grid md:grid-cols-3">
         <div
           v-for="blogPost in blogPostList"
           :key="blogPost._path"
-          class="card article"
+          class=""
         >
           <NuxtLink :to="blogPost._path">
-            <section class="blog-post-card card article">
-              <div class="media">
-                <div class="media-content has-text-centered">
-                  <h3 class="title article-title has-text-weight-bold">
+
+              <div class="">
+                <div class="">
+                  <h3 class="title article-title has-text-weight-bold mb-4">
                     {{ blogPost.title }}
                   </h3>
                   <div v-if="blogPost.image" class="aspect-square">
@@ -29,7 +29,6 @@ const { data: blogPostList } = useAsyncData("blogPostList", () => {
                   </div>
                 </div>
               </div>
-            </section>
           </NuxtLink>
         </div>
       </div>

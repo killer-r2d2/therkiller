@@ -1,6 +1,6 @@
 <template>
   <main>
-    <TheHero> A Nuxt Content v2 Blog for the rkiller</TheHero>
+    <TheHero />
     <BlogPostList />
     <Logos />
   </main>
