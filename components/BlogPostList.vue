@@ -21,7 +21,7 @@ const formatDate = (date) => {
       <div
         class="flex flex-col md:flex-row justify-between gap-12 md:grid md:grid-cols-3"
       >
-        <div v-for="blogPost in blogPostList" :key="blogPost._path" class="shadow-2xl rounded-2xl">
+        <div v-for="blogPost in blogPostList" :key="blogPost._path" class="shadow-2xl bg-white/5 text-white rounded-2xl">
           <NuxtLink :to="blogPost._path" class="no-underline group">
               <div class="">
                 <div class="flex justify-between mb-2 group-hover:text-primary-400 transition-all ease-in-out delay-150 p-5">
