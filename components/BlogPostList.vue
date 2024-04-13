@@ -21,10 +21,10 @@ const formatDate = (date) => {
       <div
         class="flex flex-col md:flex-row justify-between gap-12 md:grid md:grid-cols-3"
       >
-        <div v-for="blogPost in blogPostList" :key="blogPost._path" class="">
+        <div v-for="blogPost in blogPostList" :key="blogPost._path" class="shadow-2xl rounded-2xl">
           <NuxtLink :to="blogPost._path" class="no-underline group">
               <div class="">
-                <div class="flex justify-between mb-2 group-hover:text-primary-400 transition-all ease-in-out delay-150">
+                <div class="flex justify-between mb-2 group-hover:text-primary-400 transition-all ease-in-out delay-150 p-5">
                   <h3>
                     {{ blogPost.title }}
                   </h3>
@@ -39,7 +39,7 @@ const formatDate = (date) => {
                     class="object-cover h-full w-full"
                   />
                 </div>
-                <p class="group-hover:text-white">
+                <p class="group-hover:text-white p-5">
                   {{ blogPost.description }}
                 </p>
               </div>
