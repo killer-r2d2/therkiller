@@ -3,6 +3,7 @@ title: What is a counter?
 author: "@luisa"
 dates:
   published: "2022-06-01"
+image: "/rctritec_ipad.jpg"  
 description: This is a short description about my counter post.
 ---
 

@@ -3,6 +3,7 @@ title: My First Blog Post
 author: '@bruno'
 dates:
   published: '2022-05-01'
+image: "/rctritec_ipad.jpg"
 ---
 
 # Sample Markdown
@@ -21,8 +22,3 @@ This is some basic, sample markdown.
 
 And **bold**, _italics_.
 
-[A link](https://markdowntohtml.com)
-
-<!-- add image -->
-
-![Description of image](rctritec_ipad.jpg "Title of your image")

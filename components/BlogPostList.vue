@@ -7,7 +7,7 @@ const { data: blogPostList } = useAsyncData("blogPostList", () => {
 <template>
   <BaseSection>
     <BaseContainer>
-      <div class="flex flex-col md:flex-row justify-between">
+      <div class="flex flex-col md:flex-row justify-between gap-8">
         <div
           v-for="blogPost in blogPostList"
           :key="blogPost._path"
@@ -20,12 +20,11 @@ const { data: blogPostList } = useAsyncData("blogPostList", () => {
                   <h3 class="title article-title has-text-weight-bold">
                     {{ blogPost.title }}
                   </h3>
-                  <!-- if there is an image, render the image -->
-                  <div v-if="blogPost.image" class="image is-16by9">
+                  <div v-if="blogPost.image" class="aspect-square">
                     <img
                       :src="blogPost.image"
                       :alt="blogPost.title"
-                      class="object-cover"
+                      class="object-cover h-full w-full"
                     />
                   </div>
                 </div>
