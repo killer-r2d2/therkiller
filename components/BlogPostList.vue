@@ -2,51 +2,52 @@
 const { data: blogPostList } = useAsyncData("blogPostList", () => {
   return queryContent("/blog").find();
 });
+
+// helper function to format dates in:
+// example: 01-05-2024
+// swiss format: 5. Mai 2024
+const formatDate = (date) => {
+  return new Date(date).toLocaleDateString("de-CH", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+};
 </script>
 
 <template>
   <BaseSection>
     <BaseContainer>
-      <div class="flex flex-col md:flex-row justify-between gap-8 md:grid md:grid-cols-3">
-        <div
-          v-for="blogPost in blogPostList"
-          :key="blogPost._path"
-          class=""
-        >
-          <NuxtLink :to="blogPost._path">
-
+      <div
+        class="flex flex-col md:flex-row justify-between gap-8 md:grid md:grid-cols-3"
+      >
+        <div v-for="blogPost in blogPostList" :key="blogPost._path" class="">
+          <NuxtLink :to="blogPost._path" class="no-underline">
+            <div class="">
               <div class="">
-                <div class="">
-                  <h3 class="title article-title has-text-weight-bold mb-4">
+                <div class="flex justify-between mb-2">
+                  <h3>
                     {{ blogPost.title }}
                   </h3>
-                  <div v-if="blogPost.image" class="aspect-square">
-                    <img
-                      :src="blogPost.image"
-                      :alt="blogPost.title"
-                      class="object-cover h-full w-full"
-                    />
-                  </div>
+                  <p class="text-sm relative top-1">
+                    {{ formatDate(blogPost.dates.published) }}
+                  </p>
                 </div>
+                <div v-if="blogPost.image" class="aspect-square mb-2">
+                  <img
+                    :src="blogPost.image"
+                    :alt="blogPost.title"
+                    class="object-cover h-full w-full"
+                  />
+                </div>
+                <p>
+                  {{ blogPost.description }}
+                </p>
               </div>
+            </div>
           </NuxtLink>
         </div>
       </div>
     </BaseContainer>
   </BaseSection>
 </template>
-
-<style>
-.blog-post-card {
-  padding-top: 2.5rem;
-  padding-bottom: 3rem;
-}
-
-.blog-post-card .card-content {
-  padding: 1rem;
-}
-
-.blog-post-card .title {
-  margin-bottom: 1rem;
-}
-</style>
