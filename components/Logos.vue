@@ -3,7 +3,7 @@
   <BaseSection>
     <BaseContainer>
         <div
-          class="-mx-6 grid grid-cols-1 sm:grid-cols-2 gap-0.5 overflow-hidden sm:mx-0 sm:rounded-2xl md:grid-cols-3"
+          class=" grid grid-cols-1 sm:grid-cols-2 gap-0.5 overflow-hidden sm:mx-0 sm:rounded-2xl md:grid-cols-3"
         >
           <div class="bg-white/5 p-8 sm:p-10">
             <NuxtLink
