@@ -9,7 +9,7 @@ image: /rctritec_ipad.jpg
 
 # Launching My First Project with Kirby CMS: A Unique, Rapid Development Experience
 
-I'm excited to share my latest web development project, hosted on \[Inclousion.ch]\(https\://www\.inclousion.ch/), where I ventured into new territories with Kirby CMS, enhanced by the utility-first approach of Tailwind CSS and the simplicity of Alpine.js. This project was not only a learning curve but also an opportunity to craft a website with a unique design and rapid development phases.
+I'm excited to share my latest web development project, hosted on [Inclousion.ch](https://www.inclousion.ch/), where I ventured into new territories with Kirby CMS, enhanced by the utility-first approach of Tailwind CSS and the simplicity of Alpine.js. This project was not only a learning curve but also an opportunity to craft a website with a unique design and rapid development phases.
 
 ## Introduction to the Project
 
@@ -38,9 +38,7 @@ Alpine.js is a minimal framework for adding JavaScript behavior to HTML elements
 This project was an excellent first foray into using Kirby CMS. It provided a fast development cycle, thanks to the combined power of Kirby, Tailwind CSS, and Alpine.js. Each tool offered its unique strengths:
 
 - **Kirby CMS** for its simplicity and flexibility in content management.
-
 - **Tailwind CSS** for its speed and utility-first design philosophy.
-
 - **Alpine.js** for its minimalist approach to adding interactivity.
 
 Overall, this project not only enhanced my skills but also added a unique piece to my portfolio. For fellow developers considering this tech stack, I highly recommend diving in; it's well worth the learning curve!

@@ -10,7 +10,7 @@ const { data: blogPost } = await useAsyncData(`content-${path}`, () => {
   <main>
     <BaseSection>
       <BaseContainer>
-        <ContentDoc class="prose text-white prose-headings:text-white"/>
+        <ContentDoc class="prose text-white prose-headings:text-white prose-strong:text-primary-400"/>
       </BaseContainer>
     </BaseSection>
   </main>
