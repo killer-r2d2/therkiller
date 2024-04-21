@@ -5,6 +5,7 @@ author: '@bruno'
 dates:
   published: 2024-04-030
 image: /inclousion.webp
+tags: kirby cms, tailwindcss, alpinejs
 ---
 
 # Launching My First Project with Kirby CMS: A Unique, Rapid Development Experience

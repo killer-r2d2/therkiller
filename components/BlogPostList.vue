@@ -18,34 +18,41 @@ const formatDate = (date) => {
 <template>
   <BaseSection>
     <BaseContainer>
-      <div
+      <h2 class="font-sans mb-8 text-2xl">Blog</h2>
+      <ul
         class="flex flex-col md:flex-row justify-between gap-12 md:grid md:grid-cols-3"
       >
-        <div v-for="blogPost in blogPostList" :key="blogPost._path" class="shadow-2xl bg-white/5 text-white rounded-2xl">
-          <NuxtLink :to="blogPost._path" class="no-underline group">
-              <div class="">
-                <div class="flex justify-between mb-2 group-hover:text-primary-400 transition-all ease-in-out delay-150 p-5">
-                  <h3>
-                    {{ blogPost.title }}
-                  </h3>
-                  <p class="text-sm relative top-1">
-                    {{ formatDate(blogPost.dates.published) }}
-                  </p>
-                </div>
-                <div v-if="blogPost.image" class="aspect-[5/3] mb-2">
-                  <img
-                    :src="blogPost.image"
-                    :alt="blogPost.title"
-                    class="object-cover h-full w-full"
-                  />
-                </div>
-                <p class="group-hover:text-white p-5">
-                  {{ blogPost.description }}
+        <li
+          v-for="blogPost in blogPostList"
+          :key="blogPost._path"
+          class="shadow-2xl bg-primary-900 text-white rounded-2xl group border-t-4 border-t-primary-400"
+        >
+          <NuxtLink :to="blogPost._path" class="no-underline">
+            <div class="p-5">
+              <div
+                class="group-hover:opacity-80 transition-all ease-in-out duration-75"
+              >
+                <p class="text-sm mb-2">
+                  {{ formatDate(blogPost.dates.published) }}
+                </p>
+                <h3 class="mb-2">
+                  {{ blogPost.title }}
+                </h3>
+                <p class="mb-2 text-sm">
+                  {{ blogPost.tags }}
                 </p>
               </div>
+              <div v-if="blogPost.image" class="aspect-[5/3] rounded-2xl">
+                <img
+                  :src="blogPost.image"
+                  :alt="blogPost.title"
+                  class="object-cover h-full w-full rounded-2xl"
+                />
+              </div>
+            </div>
           </NuxtLink>
-        </div>
-      </div>
+        </li>
+      </ul>
     </BaseContainer>
   </BaseSection>
 </template>
