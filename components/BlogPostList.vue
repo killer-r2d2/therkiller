@@ -43,10 +43,13 @@ const formatDate = (date) => {
                 </p>
               </div>
               <div v-if="blogPost.image" class="aspect-[5/3] rounded-2xl">
-                <img
+                <NuxtImg
                   :src="blogPost.image"
                   :alt="blogPost.title"
-                  class="object-cover h-full w-full rounded-2xl"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="center"
+                  class="rounded-2xl"
                 />
               </div>
             </div>

@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  image: {
+    format: ['webp'],
+  },
   content: {
     markdown: {
       // anchorLinks value false
