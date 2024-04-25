@@ -1,6 +1,8 @@
 <script setup>
-const { data: blogPostList } = useAsyncData("blogPostList", () => {
-  return queryContent("/blog").find();
+
+const { data: blogPostList } = useAsyncData("blogPostList", async () => {
+  const posts = await queryContent("/blog").find();
+  return posts.sort((a, b) => new Date(b.dates.published) - new Date(a.dates.published));
 });
 
 // helper function to format dates in:
@@ -25,22 +27,20 @@ const formatDate = (date) => {
         <li
           v-for="blogPost in blogPostList"
           :key="blogPost._path"
-          class="shadow-2xl bg-primary-900 text-white rounded-2xl group border-t-4 border-t-primary-400"
+          class="shadow-2xl bg-primary-900 text-white rounded-2xl group"
         >
           <NuxtLink :to="blogPost._path" class="no-underline">
-            <div class="p-5">
+            <div class="p-4">
               <div
                 class="group-hover:opacity-80 transition-all ease-in-out duration-75"
               >
                 <p class="text-sm mb-2">
                   {{ formatDate(blogPost.dates.published) }}
                 </p>
-                <h3 class="mb-2">
+                <h3 class="mb-2 text-base">
                   {{ blogPost.title }}
                 </h3>
-                <p class="mb-2 text-sm">
-                  {{ blogPost.tags }}
-                </p>
+
               </div>
               <div v-if="blogPost.image" class="aspect-[5/3] rounded-2xl">
                 <NuxtImg
@@ -52,6 +52,9 @@ const formatDate = (date) => {
                   class="rounded-2xl"
                 />
               </div>
+              <p class="mb-2 text-sm">
+                  {{ blogPost.tags }}
+                </p>
             </div>
           </NuxtLink>
         </li>
