@@ -5,7 +5,7 @@
         <div
           class=" grid grid-cols-1 sm:grid-cols-2 gap-5 overflow-hidden sm:mx-0 md:grid-cols-3"
         >
-          <div class="p-4 border-2 border-primary-400 rounded-lg flex justify-center items-center">
+          <div class="p-4 border-2 border-white rounded-lg flex justify-center items-center">
             <NuxtLink
               to="https://nuxt.com/"
               target="_blank"
@@ -15,7 +15,7 @@
               <LogoNuxt class="max-w-24" />
             </NuxtLink>
           </div>
-          <div class="p-4 border-2 border-primary-400 rounded-lg flex justify-center items-center">
+          <div class="p-4 border-2 border-white rounded-lg flex justify-center items-center">
             <NuxtLink
               to="https://tailwindcss.com/"
               target="_blank"
@@ -25,7 +25,7 @@
               <LogoTailwind class="max-w-24" />
             </NuxtLink>
           </div>
-          <div class="p-4 border-2 border-primary-400 rounded-lg flex justify-center items-center">
+          <div class="p-4 border-2 border-white rounded-lg flex justify-center items-center">
             <NuxtLink
               to="https://laravel.com/"
               target="_blank"
@@ -35,7 +35,7 @@
               <LogoKirby class="max-w-24" />
             </NuxtLink>
           </div>
-          <div class="p-4 border-2 border-primary-400 rounded-lg flex justify-center items-center">
+          <div class="p-4 border-2 border-white rounded-lg flex justify-center items-center">
             <NuxtLink
               to="https://strapi.io/"
               target="_blank"
@@ -45,7 +45,7 @@
               <LogoStrapi class="max-w-24" />
             </NuxtLink>
           </div>
-          <div class="p-4 border-2 border-primary-400 rounded-lg flex justify-center items-center">
+          <div class="p-4 border-2 border-white rounded-lg flex justify-center items-center">
             <NuxtLink
               to="https://nextjs.org/"
               target="_blank"
@@ -55,7 +55,7 @@
               <LogoNextjs class="max-w-24" />
             </NuxtLink>
           </div>
-          <div class="p-4 border-2 border-primary-400 rounded-lg flex justify-center items-center">
+          <div class="p-4 border-2 border-white rounded-lg flex justify-center items-center">
             <NuxtLink
               to="https://supabase.com/"
               target="_blank"
