@@ -1,0 +1,1 @@
+import{r as o,b as r,c as s,e as t,j as c,t as a,P as u}from"./BK9jfDQs.js";const _={class:"counter"},l={class:"current-count"},C={__name:"Counter",setup(i){const e=o(0),n=()=>{e.value++};return(d,p)=>(r(),s("div",_,[t("p",l,[c(" Current Count: "),t("strong",null,a(u(e)),1)]),t("button",{onClick:n},"Add 1")]))}};export{C as default};
