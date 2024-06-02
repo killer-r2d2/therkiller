@@ -27,7 +27,7 @@
           </div>
           <div class="p-4 border-2 border-white rounded-lg flex justify-center items-center">
             <NuxtLink
-              to="https://laravel.com/"
+              to="https://getkirby.com//"
               target="_blank"
               aria-label="Visit Kirby cms"
               class="w-full object-contain inline-flex justify-center transform scale-100 transition-all hover:scale-110"
