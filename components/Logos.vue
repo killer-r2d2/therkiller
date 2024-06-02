@@ -10,7 +10,7 @@
               to="https://nuxt.com/"
               target="_blank"
               aria-label="Visit Nuxtjs"
-              class="w-full object-contain inline-flex justify-center transform scale-100 transition-all hover:scale-110"
+              class="w-full object-contain inline-flex justify-center transform scale-100 transition-all hover:scale-110 duration-300"
             >
               <LogoNuxt class="max-w-24" />
             </NuxtLink>
@@ -20,7 +20,7 @@
               to="https://tailwindcss.com/"
               target="_blank"
               aria-label="Visit Tailwind CSS"
-              class="w-full object-contain inline-flex justify-center transform scale-100 transition-all hover:scale-110"
+              class="w-full object-contain inline-flex justify-center transform scale-100 transition-all hover:scale-110 duration-300"
             >
               <LogoTailwind class="max-w-24" />
             </NuxtLink>
@@ -30,7 +30,7 @@
               to="https://getkirby.com//"
               target="_blank"
               aria-label="Visit Kirby cms"
-              class="w-full object-contain inline-flex justify-center transform scale-100 transition-all hover:scale-110"
+              class="w-full object-contain inline-flex justify-center transform scale-100 transition-all hover:scale-110 duration-300"
             >
               <LogoKirby class="max-w-24" />
             </NuxtLink>
@@ -40,7 +40,7 @@
               to="https://strapi.io/"
               target="_blank"
               aria-label="Visit Strapi.io Headless CMS"
-              class="w-full object-contain inline-flex justify-center transform scale-100 transition-all hover:scale-110"
+              class="w-full object-contain inline-flex justify-center transform scale-100 transition-all hover:scale-110 duration-300"
             >
               <LogoStrapi class="max-w-24" />
             </NuxtLink>
@@ -50,7 +50,7 @@
               to="https://nextjs.org/"
               target="_blank"
               aria-label="Visit Nextjs"
-              class="w-full object-contain inline-flex justify-center transform scale-100 transition-all hover:scale-110"
+              class="w-full object-contain inline-flex justify-center transform scale-100 transition-all hover:scale-110 duration-300"
             >
               <LogoNextjs class="max-w-24" />
             </NuxtLink>
@@ -60,7 +60,7 @@
               to="https://supabase.com/"
               target="_blank"
               aria-label="Visit Supabase"
-              class="w-full object-contain inline-flex justify-center transform scale-100 transition-all hover:scale-110"
+              class="w-full object-contain inline-flex justify-center transform scale-100 transition-all hover:scale-110 duration-300"
             >
               <LogoSupabase class="max-w-24" />
             </NuxtLink>
