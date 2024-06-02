@@ -10,7 +10,7 @@ tags: nuxt3, tailwindcss, strapi, headless
 
 # Dental Care with Nuxt3 and Strapi
 
-I'm thrilled to unveil a recent endeavor that brought modern web technology to the dental sector, specifically through my work on Zahnarztpraxis Alpstein. This project leveraged the capabilities of Nuxt3, Tailwind CSS, and Strapi to deliver a seamless user experience and efficient content management.
+I'm thrilled to unveil a recent endeavor that brought modern web technology to the dental sector, specifically through my work on [Zahnarztpraxis Alpstein](https://www.zahnarztpraxis-alpstein.ch/). This project leveraged the capabilities of Nuxt3, Tailwind CSS, and Strapi to deliver a seamless user experience and efficient content management.
 
 ## Project Overview
 
