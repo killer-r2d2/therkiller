@@ -3,7 +3,7 @@ title: My First Project with Kirby
 description: this is a small description about me for my blog alsdfaldfs alsdfkasfd
 author: '@bruno'
 dates:
-  published: 2024-04-30
+  published: 2024-04-30T00:00:00.000Z
 image: /inclousion.jpg
 tags: kirby cms, tailwindcss, alpinejs
 ---
