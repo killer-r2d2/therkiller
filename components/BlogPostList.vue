@@ -22,7 +22,7 @@ const formatDate = (date) => {
     <BaseContainer>
       <h2 class="font-sans mb-8 text-2xl">Blog</h2>
       <ul
-        class="flex flex-col md:flex-row justify-between gap-12 md:grid md:grid-cols-3"
+        class="flex flex-col md:flex-row justify-between gap-12 md:grid md:grid-cols-2 lg:grid-cols-3"
       >
         <li
           v-for="blogPost in blogPostList"
