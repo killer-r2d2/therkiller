@@ -1,5 +1,5 @@
 ---
-title: My First Experience Setting Up a Web Server with Nginx
+title: My First Experience Setting Up a Web Server
 description: Reflections on setting up Nginx Virtual Hosts and securing them with Let's Encrypt for the first time.
 author: '@yourname'
 dates:
@@ -8,7 +8,7 @@ dates:
 tags: nginx, let's encrypt, web server, linux
 ---
 
-# My First Experience Setting Up a Web Server with Nginx
+# My First Experience Setting Up a Web Server
 
 Recently, I embarked on a new challenge: setting up a web server using Nginx on an Ubuntu system. This was my first time diving into the world of server configuration, and I wanted to share my experiences and the valuable lessons I learned along the way.
 
