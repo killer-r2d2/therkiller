@@ -1,13 +1,9 @@
 <script setup>
-
 const { data: blogPostList } = useAsyncData("blogPostList", async () => {
   const posts = await queryContent("/blog").find();
   return posts.sort((a, b) => new Date(b.dates.published) - new Date(a.dates.published));
 });
 
-// helper function to format dates in:
-// example: 01-05-2024
-// swiss format: 5. Mai 2024
 const formatDate = (date) => {
   return new Date(date).toLocaleDateString("de-CH", {
     day: "numeric",
@@ -21,40 +17,26 @@ const formatDate = (date) => {
   <BaseSection>
     <BaseContainer>
       <h2 class="font-sans mb-8 text-2xl">Blog</h2>
-      <ul
-        class="flex flex-col md:flex-row justify-between gap-12 md:grid md:grid-cols-2 lg:grid-cols-3"
-      >
+      <ul class="flex flex-wrap gap-12">
         <li
           v-for="blogPost in blogPostList"
           :key="blogPost._path"
-          class="shadow-2xl bg-primary-900 text-white rounded-2xl group"
+          class="flex flex-col shadow-2xl bg-primary-900 text-white rounded-2xl group flex-1 min-h-[300px]"
         >
-          <NuxtLink :to="blogPost._path" class="no-underline">
-            <div class="p-4">
-              <div
-                class="group-hover:opacity-80 transition-all ease-in-out duration-75"
-              >
-                <p class="text-sm mb-2">
-                  {{ formatDate(blogPost.dates.published) }}
-                </p>
-                <h3 class="mb-2 text-base">
-                  {{ blogPost.title }}
-                </h3>
-
+          <NuxtLink :to="blogPost._path" class="no-underline flex flex-col h-full">
+            <div class="p-4 flex flex-col flex-grow">
+              <div class="group-hover:opacity-80 transition-all ease-in-out duration-75 flex-grow">
+                <p class="text-sm mb-2">{{ formatDate(blogPost.dates.published) }}</p>
+                <h3 class="mb-2 text-base">{{ blogPost.title }}</h3>
               </div>
-              <div v-if="blogPost.image" class="aspect-[5/3] rounded-2xl">
+              <div v-if="blogPost.image" class="relative pb-[60%] rounded-2xl mb-2">
                 <NuxtImg
                   :src="blogPost.image"
                   :alt="blogPost.title"
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="center"
-                  class="rounded-2xl"
+                  class="absolute top-0 left-0 w-full h-full object-cover rounded-2xl"
                 />
               </div>
-              <p class="mb-2 text-sm">
-                  {{ blogPost.tags }}
-                </p>
+              <p class="text-sm">{{ blogPost.tags }}</p>
             </div>
           </NuxtLink>
         </li>

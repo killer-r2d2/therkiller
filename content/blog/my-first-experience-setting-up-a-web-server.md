@@ -4,7 +4,7 @@ description: Reflections on setting up Nginx Virtual Hosts and securing them wit
 author: '@yourname'
 dates:
   published: 2024-07-24T00:00:00.000Z
-# image: /nginx-first-setup.jpg
+image: /nginx-first-setup.jpg
 tags: nginx, let's encrypt, web server, linux
 ---
 
@@ -22,7 +22,7 @@ One of the key concepts I learned was Virtual Hosts. Virtual Hosts allow a singl
 
 ## The Sites-Available and Sites-Enabled Directories
 
-A major part of the setup process involved understanding the purpose of the `sites-available` and `sites-enabled` directories in Nginx. The `sites-available` directory contains all possible configurations for the various sites, while `sites-enabled` only contains symbolic links to the configurations that are currently active. This separation simplifies the management and activation or deactivation of websites.
+A major part of the setup process involved understanding the purpose of the sites-available and sites-enabled directories in Nginx. The sites-available directory contains all possible configurations for the various sites, while sites-enabled only contains symbolic links to the configurations that are currently active. This separation simplifies the management and activation or deactivation of websites.
 
 ## Configuring the Nginx Files
 
