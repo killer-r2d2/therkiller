@@ -4,6 +4,9 @@ const { data: blogPostList } = useAsyncData("blogPostList", async () => {
   return posts.sort((a, b) => new Date(b.dates.published) - new Date(a.dates.published));
 });
 
+// helper function to format dates in:
+// example: 01-05-2024
+// swiss format: 5. Mai 2024
 const formatDate = (date) => {
   return new Date(date).toLocaleDateString("de-CH", {
     day: "numeric",
@@ -17,7 +20,7 @@ const formatDate = (date) => {
   <BaseSection>
     <BaseContainer>
       <h2 class="font-sans mb-8 text-2xl">Blog</h2>
-      <ul class="flex flex-wrap gap-12">
+      <ul class="flex flex-col lg:flex-row lg:flex-wrap gap-12">
         <li
           v-for="blogPost in blogPostList"
           :key="blogPost._path"
