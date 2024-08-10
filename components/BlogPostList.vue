@@ -41,6 +41,7 @@ const formatDate = (date) => {
                   :src="blogPost.image"
                   :alt="blogPost.title"
                   class="absolute top-0 left-0 w-full h-full object-cover rounded-2xl"
+                  loading="lazy"
                 />
               </div>
               <div
