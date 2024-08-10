@@ -1,5 +1,4 @@
 <script setup>
-const isMobileNavOpen = ref(false)
 </script>
 
 <template>
