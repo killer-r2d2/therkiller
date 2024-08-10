@@ -4,7 +4,7 @@ description: Discover how leveraging Nuxt3, Tailwind CSS, and Strapi transformed
 author: '@bruno'
 dates:
   published: 2024-04-25T00:00:00.000Z
-image: /dental.gif
+image: /zahnarztpraxis-am-alpstein.jpg
 tags: nuxt3, tailwindcss, strapi, headless
 ---
 
