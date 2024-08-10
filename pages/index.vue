@@ -1,7 +1,7 @@
 <template>
   <main>
     <TheHero />
-    <BlogPostList />
-    <Logos />
+    <LazyBlogPostList />
+    <LazyLogos />
   </main>
 </template>
