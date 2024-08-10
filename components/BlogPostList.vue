@@ -42,6 +42,8 @@ const formatDate = (date) => {
                   :alt="blogPost.title"
                   class="absolute top-0 left-0 w-full h-full object-cover rounded-2xl"
                   loading="lazy"
+                  format="webp"
+                  sizes="100vw"
                 />
               </div>
               <div
