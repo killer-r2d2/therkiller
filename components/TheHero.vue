@@ -21,6 +21,7 @@ const { data: content } = await useAsyncData("home", () =>
             class="rounded-full object-cover w-24 h-24"
             src="/roger-killer.jpg"
             alt="Roger Killer"
+            format="webp"
           />
         </div>
         <div class="flex justify-center gap-x-4 mb-8 lg:mb-0"><Socials /></div>
