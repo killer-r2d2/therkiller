@@ -5,17 +5,6 @@ const { data: blogPostList } = useAsyncData("blogPostList", async () => {
     (a, b) => new Date(b.dates.published) - new Date(a.dates.published)
   );
 });
-
-// helper function to format dates in:
-// example: 01-05-2024
-// swiss format: 5. Mai 2024
-const formatDate = (date) => {
-  return new Date(date).toLocaleDateString("de-CH", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
-};
 </script>
 
 <template>
@@ -28,35 +17,7 @@ const formatDate = (date) => {
           :key="blogPost._path"
           class="flex flex-col shadow-2xl bg-primary-900 text-white rounded-2xl group flex-1 col-span-1"
         >
-          <NuxtLink
-            :to="blogPost._path"
-            class="no-underline flex flex-col h-full"
-          >
-            <div class="p-4 flex flex-col flex-grow">
-              <div
-                v-if="blogPost.image"
-                class="relative pb-[60%] rounded-2xl mb-2"
-              >
-                <NuxtImg
-                  :src="blogPost.image"
-                  :alt="blogPost.title"
-                  class="absolute top-0 left-0 w-full h-full object-cover rounded-2xl"
-                  loading="lazy"
-                  quality="65"
-                  format="webp"
-                />
-              </div>
-              <div
-                class="group-hover:opacity-80 transition-all ease-in-out duration-75 flex-grow"
-              >
-                <p class="text-sm mb-2">
-                  {{ formatDate(blogPost.dates.published) }}
-                </p>
-                <h3 class="mb-2 text-base">{{ blogPost.title }}</h3>
-              </div>
-              <p class="text-sm">{{ blogPost.tags }}</p>
-            </div>
-          </NuxtLink>
+          <BlogCard :blogPost="blogPost" />
         </li>
       </ul>
     </BaseContainer>
