@@ -1,9 +1,8 @@
 <script setup>
-const { data: blogPostList } = useAsyncData("blogPostList", async () => {
-  const posts = await queryContent("/blog").find();
-  return posts.sort(
-    (a, b) => new Date(b.dates.published) - new Date(a.dates.published)
-  );
+const { $blogRepository } = useNuxtApp();
+
+const { data: blogPostList } = useAsyncData('blogPostList', () => {
+  return $blogRepository.getAllPosts();
 });
 </script>
 
