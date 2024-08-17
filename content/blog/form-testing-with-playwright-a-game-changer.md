@@ -5,7 +5,7 @@ author: '@yourname'
 dates:
   published: 2024-08-17T00:00:00.000Z
 image: /playwright-testing.jpg
-tags: playwright, automated testing, web development, end-to-end testing
+tags: playwright, automated testing, end-to-end testing
 ---
 
 # Automating Form Testing with Playwright: A Game-Changer
