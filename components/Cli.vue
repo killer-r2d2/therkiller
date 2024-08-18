@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref } from "vue";
+import type { Joke } from "~/types/joke";
 
 const currentCommand = ref("");
 const history = ref([
@@ -6,24 +8,48 @@ const history = ref([
   "Type `help` to see a list of available commands.",
 ]);
 
-const commands = {
-  help: "Available commands: help, npm install, git blame, clear, exit",
-  "npm install": "Installing life-lessons... Done!",
-  "git blame": "Oops! Blame is not available for this project.",
+const commands: { [key: string]: any } = {
+  help: 'Available commands: help, joke, hack, sudo, adventure, compliment, clear, exit',
+  sudo: 'Nice try, but you’re not an admin here!',
+  hack: 'Initiating hack... just kidding, stay ethical!',
+  compliment: () => {
+    const compliments = [
+      'You have the best coding style!',
+      'Your code is as clean as your desk… I hope.',
+      'You are a JavaScript wizard!',
+    ];
+    return compliments[Math.floor(Math.random() * compliments.length)];
+  },
+  adventure: `
+  You are in a dark room. There is a door to the left and right.
+  Type "left" or "right" to choose a path.
+  `,
+  left: 'You found a treasure chest! But it’s locked. The game ends here.',
+  right: 'You encounter a monster. Game over!',
   clear: () => {
     history.value = [];
   },
-  exit: "Goodbye! Refresh the page to restart the CLI.",
-  default: "Command not found. Try `help`.",
+  exit: 'Goodbye! Refresh the page to restart the CLI.',
+  
+  joke: async (): Promise<string> => {
+    try {
+      const response: Joke = await $fetch('https://v2.jokeapi.dev/joke/Programming?type=twopart');
+      return `${response.setup} - ${response.delivery}`;
+    } catch (error) {
+      return 'Failed to fetch a joke. Please try again later.';
+    }
+  },
+  
+  default: "Command not found. Try `help`."
 };
 
-const executeCommand = () => {
+const executeCommand = async () => {
   const command = currentCommand.value.trim();
 
   if (commands[command]) {
     const response =
       typeof commands[command] === "function"
-        ? commands[command]()
+        ? await commands[command]()
         : commands[command];
     history.value.push(`$ ${command}`, response);
   } else {
@@ -34,11 +60,10 @@ const executeCommand = () => {
 };
 
 const focusInput = () => {
-  setTimeout(() => {
-    if ($refs.cliInput) {
-      $refs.cliInput.focus();
-    }
-  }, 100);
+  const input = document.querySelector(".cli-input") as HTMLInputElement;
+  if (input) {
+    input.focus();
+  }
 };
 </script>
 
@@ -64,7 +89,7 @@ const focusInput = () => {
             ref="cliInput"
             v-model="currentCommand"
             @keydown.enter="executeCommand"
-            class="cli-input bg-transparent border-none outline-none text-primary-500 flex-grow font-mono text-sm"
+            class="cli-input bg-transparent border-none outline-none text-white flex-grow font-mono text-sm"
             type="text"
             autofocus
           />
