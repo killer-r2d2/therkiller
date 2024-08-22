@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/css/main.css'],
   devtools: { enabled: true },
-  modules: ["@nuxt/image", '@nuxt/content', "@nuxthq/studio"],
+  modules: ["@nuxt/image", '@nuxt/content'],
   postcss: {
     plugins: {
       tailwindcss: {},
