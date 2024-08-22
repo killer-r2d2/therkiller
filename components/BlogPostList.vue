@@ -14,7 +14,7 @@ const { data: blogPostList } = useAsyncData('blogPostList', () => {
         <li
           v-for="blogPost in blogPostList"
           :key="blogPost._path"
-          class="flex flex-col shadow-2xl bg-primary-900 text-white rounded-2xl group flex-1 col-span-1"
+          class="flex flex-col shadow-2xl bg-primary-900 text-white rounded-2xl group flex-1 col-span-1 relative"
         >
           <BlogCard :blogPost="blogPost" />
         </li>

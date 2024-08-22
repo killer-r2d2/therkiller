@@ -17,20 +17,22 @@ const formatDate = (date: string) => {
 </script>
 
 <template>
-  <NuxtLink
-    :to="props.blogPost._path"
-    class="no-underline flex flex-col h-full"
-  >
-    <div class="p-4 flex flex-col flex-grow">
-      <div
-        class="group-hover:opacity-80 transition-all ease-in-out duration-75 flex-grow"
+  <div class="relative h-full group">
+    <div class="after:content-[''] after:absolute after:bottom-0 after:left-3 after:right-3 after:h-[5px] after:bg-gradient-to-r after:from-transparent after:via-primary-400 after:to-transparent after:rounded-md after:shadow-lg after:transition-all after:duration-300 after:ease-in-out after:scale-x-0 group-hover:after:scale-x-100">
+      <NuxtLink
+        :to="props.blogPost._path"
+        class="no-underline flex flex-col h-full z-10"
       >
-        <p class="text-sm mb-2">
-          {{ formatDate(props.blogPost.dates.published) }}
-        </p>
-        <h3 class="mb-2 text-base">{{ props.blogPost.title }}</h3>
-      </div>
-      <p class="text-sm">{{ props.blogPost.tags }}</p>
+        <div class="p-4 flex flex-col flex-grow">
+          <div class="flex-grow">
+            <p class="text-sm mb-2">
+              {{ formatDate(props.blogPost.dates.published) }}
+            </p>
+            <h3 class="mb-2 text-base">{{ props.blogPost.title }}</h3>
+          </div>
+          <p class="text-sm">{{ props.blogPost.tags }}</p>
+        </div>
+      </NuxtLink>
     </div>
-  </NuxtLink>
+  </div>
 </template>
