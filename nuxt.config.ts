@@ -1,5 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  nitro: {
+    static: true,
+  },
+  routeRules: {
+    '/': { prerender: true }, // Pre-renders the home page
+    '/blog/**': { prerender: true }, // Pre-renders all blog pages
+  },
   app: {  
     pageTransition: {
       name: 'page',
