@@ -1,0 +1,1 @@
+import{g as t,h as o,j as c,f as s,aw as n}from"./CFlwAquE.js";import{_ as a}from"./DlAUqK2U.js";const _={},r={class:"main-gradient text-white min-h-screen flex flex-col"},i={class:"grow"};function d(f,l){const e=n;return s(),t("div",r,[o("div",i,[c(e)])])}const p=a(_,[["render",d]]);export{p as default};
