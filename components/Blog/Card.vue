@@ -21,7 +21,7 @@ const formatDate = (date: string) => {
     <div class="after:content-[''] after:absolute after:bottom-0 after:left-3 after:right-3 after:h-[5px] after:bg-gradient-to-r after:from-transparent after:via-primary-400 after:to-transparent after:rounded-md after:shadow-lg after:transition-all after:duration-300 after:ease-in-out after:scale-x-0 group-hover:after:scale-x-100">
       <NuxtLink
         :to="props.blogPost._path"
-        class="no-underline flex flex-col h-full z-10"
+        class="no-underline flex flex-col h-full z-10 opacity-80 hover:opacity-100"
       >
         <div class="p-4 flex flex-col flex-grow">
           <div class="flex-grow">
