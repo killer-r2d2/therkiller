@@ -1,1 +1,0 @@
-import{c as o,f as s,g as r,h as t,m as c,t as a,H as u}from"./CFlwAquE.js";const _={class:"counter"},l={class:"current-count"},f={__name:"Counter",setup(i){const e=o(0),n=()=>{e.value++};return(d,p)=>(s(),r("div",_,[t("p",l,[c(" Current Count: "),t("strong",null,a(u(e)),1)]),t("button",{onClick:n},"Add 1")]))}};export{f as default};
