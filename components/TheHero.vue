@@ -19,7 +19,7 @@ const { data: content } = await useAsyncData("home", () =>
         <div class="flex justify-center mb-8">
           <NuxtImg
             class="rounded-full object-cover w-24 h-24"
-            src="/roger-killer.jpg"
+            :src="content.profileImage"
             alt="Roger Killer"
             format="webp"
           />

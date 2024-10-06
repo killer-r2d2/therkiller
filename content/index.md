@@ -1,5 +1,6 @@
 ---
 title: Hey, I'm Roger
+profileImage: /roger-killer.jpg
 ---
 
 I am a Frontend Developer at [Brüggli Admedia](https://www.brueggli-admedia.ch/). I like to build things.
