@@ -91,7 +91,6 @@ const focusInput = () => {
             @keydown.enter="executeCommand"
             class="cli-input bg-transparent border-none outline-none text-white flex-grow font-mono text-sm"
             type="text"
-            autofocus
           />
         </div>
       </div>
