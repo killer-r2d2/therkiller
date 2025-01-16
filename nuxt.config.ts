@@ -3,32 +3,40 @@ export default defineNuxtConfig({
   nitro: {
     static: true,
   },
+
   routeRules: {
     '/': { prerender: true }, // Pre-renders the home page
     '/blog/**': { prerender: true }, // Pre-renders all blog pages
   },
+
   app: {  
     pageTransition: {
       name: 'page',
       mode: 'out-in'
     }
   },
+
   image: {
     format: ['webp'],
   },
+
   content: {
     markdown: {
       // anchorLinks value false
       anchorLinks: false,
     }
   },
+
   css: ['~/assets/css/main.css'],
   devtools: { enabled: true },
   modules: ["@nuxt/image", '@nuxt/content'],
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+
+  compatibilityDate: '2024-12-21',
 })

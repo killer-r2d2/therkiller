@@ -1,4 +1,3 @@
-import { defineNuxtPlugin } from "#app";
 import BlogRepository from '~/repositories/BlogRepository';
 
 export default defineNuxtPlugin(() => {
