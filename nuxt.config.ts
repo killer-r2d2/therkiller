@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   nitro: {
+    // Static generation is used to pre-render your pages as static HTML files. This can greatly improve the performance and SEO of your website.
     static: true,
   },
 
