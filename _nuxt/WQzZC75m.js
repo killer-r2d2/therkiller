@@ -1,0 +1,1 @@
+import{_ as t}from"./DlAUqK2U.js";import{f as e,g as o,O as s}from"./CT7z4_h8.js";const _={},r={class:"container mx-auto"};function a(n,c){return o(),e("div",r,[s(n.$slots,"default")])}const u=t(_,[["render",a]]),m={},f={class:"my-12 md:my-24 lg:my-44"};function d(n,c){return o(),e("section",f,[s(n.$slots,"default")])}const p=t(m,[["render",d]]);export{u as _,p as a};
