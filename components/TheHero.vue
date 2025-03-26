@@ -9,7 +9,7 @@ const { data: content } = await useAsyncData("home", () =>
     <BaseContainer>
       <div class="text-center">
         <h1
-          class="mt-1 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
+          class="mt-1 text-4xl font-bold tracking-tight sm:text-6xl lg:text-6xl"
         >
           {{ content.title }}
         </h1>
