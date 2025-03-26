@@ -1,38 +1,40 @@
 <script setup lang="ts">
-// Import the BlogPost type
-import type { BlogPost } from '@/types/blogPost';
-const props = defineProps<{
-  blogPost: BlogPost;
-}>()
-// helper function to format dates in:
-// example: 01-05-2024
-// swiss format: 5. Mai 2024
-const formatDate = (date: string) => {
-  return new Date(date).toLocaleDateString("de-CH", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
-};
+	// Import the BlogPost type
+	import type { BlogPost } from '@/types/blogPost';
+	const props = defineProps<{
+		blogPost: BlogPost;
+	}>();
+	// helper function to format dates in:
+	// example: 01-05-2024
+	// swiss format: 5. Mai 2024
+	const formatDate = (date: string) => {
+		return new Date(date).toLocaleDateString('de-CH', {
+			day: 'numeric',
+			month: 'long',
+			year: 'numeric',
+		});
+	};
 </script>
 
 <template>
-  <div class="relative h-full group">
-    <div class="after:content-[''] after:absolute after:bottom-0 after:left-3 after:right-3 after:h-[5px] after:bg-gradient-to-r after:from-transparent after:via-primary-400 after:to-transparent after:rounded-md after:shadow-lg after:transition-all after:duration-300 after:ease-in-out after:scale-x-0 group-hover:after:scale-x-100 h-full">
-      <NuxtLink
-        :to="props.blogPost._path"
-        class="no-underline flex flex-col h-full z-10 opacity-80 hover:opacity-100"
-      >
-        <div class="p-4 flex flex-col flex-grow">
-          <div class="flex-grow">
-            <p class="text-sm mb-2">
-              {{ formatDate(props.blogPost.dates.published) }}
-            </p>
-            <h3 class="mb-2 text-base">{{ props.blogPost.title }}</h3>
-          </div>
-          <p class="text-sm">{{ props.blogPost.tags }}</p>
-        </div>
-      </NuxtLink>
-    </div>
-  </div>
+	<div class="group relative h-full">
+		<div
+			class="h-full after:absolute after:bottom-0 after:left-3 after:right-3 after:h-[5px] after:scale-x-0 after:rounded-md after:bg-gradient-to-r after:from-transparent after:via-primary-400 after:to-transparent after:shadow-lg after:transition-all after:duration-300 after:ease-in-out after:content-[''] group-hover:after:scale-x-100"
+		>
+			<NuxtLink
+				:to="props.blogPost._path"
+				class="z-10 flex h-full flex-col no-underline opacity-80 hover:opacity-100"
+			>
+				<div class="flex flex-grow flex-col p-4">
+					<div class="flex-grow">
+						<p class="mb-2 text-sm">
+							{{ formatDate(props.blogPost.dates.published) }}
+						</p>
+						<h3 class="mb-2 text-base">{{ props.blogPost.title }}</h3>
+					</div>
+					<p class="text-sm">{{ props.blogPost.tags }}</p>
+				</div>
+			</NuxtLink>
+		</div>
+	</div>
 </template>

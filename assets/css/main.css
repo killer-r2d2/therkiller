@@ -3,31 +3,31 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Lato";
-  font-weight: 700;
-  src: url("/fonts/Lato-Bold.ttf") format("truetype");
+	font-family: 'Lato';
+	font-weight: 700;
+	src: url('/fonts/Lato-Bold.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "RobotoSlab";
-  font-weight: 400;
-  src: url("/fonts/Lato-Regular.ttf") format("truetype");
+	font-family: 'RobotoSlab';
+	font-weight: 400;
+	src: url('/fonts/Lato-Regular.ttf') format('truetype');
 }
 
 @layer base {
-  html {
-    @apply scroll-smooth;
-  }
-  * {
-    @apply font-sans text-base font-light lg:text-lg;
-  }
-  a {
-    @apply underline hover:opacity-80;
-  }
+	html {
+		@apply scroll-smooth;
+	}
+	* {
+		@apply font-sans text-base font-light lg:text-lg;
+	}
+	a {
+		@apply underline hover:opacity-80;
+	}
 }
 
 @layer components {
-  .main-gradient {
-    background: linear-gradient(to bottom, #362aca, #25229b, #18186e, #0e0e43);
-  }
+	.main-gradient {
+		background: linear-gradient(to bottom, #362aca, #25229b, #18186e, #0e0e43);
+	}
 }

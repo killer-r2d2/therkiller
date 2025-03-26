@@ -1,5 +1,5 @@
 export type Joke = {
-  joke: string;
-  setup: string;
-  delivery: string;
+	joke: string;
+	setup: string;
+	delivery: string;
 };

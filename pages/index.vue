@@ -1,8 +1,13 @@
 <template>
-  <main>
-    <TheHero />
-    <CliTerminal />
-    <LazyBlogPostList />
-    <LazyLogoCollection />
-  </main>
+	<main>
+		<TheHero />
+		<CliTerminal />
+		<LazyBlogPostList />
+		<LazyLogoCollection />
+
+
+
+
+    
+	</main>
 </template>
