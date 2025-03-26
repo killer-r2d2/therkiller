@@ -30,7 +30,7 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
   devtools: { enabled: true },
-  modules: ["@nuxt/image", '@nuxt/content'],
+  modules: ["@nuxt/image", '@nuxt/content', '@nuxt/eslint'],
 
   postcss: {
     plugins: {

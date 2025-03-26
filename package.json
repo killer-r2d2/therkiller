@@ -3,14 +3,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "prepare": "husky",
-    "test": "echo 'test'"
+    "test": "echo 'test'",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@nuxt/content": "^2.12.1",
@@ -19,11 +20,14 @@
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
+    "@nuxt/eslint": "^1.2.0",
     "@tailwindcss/typography": "^0.5.12",
     "autoprefixer": "^10.4.19",
+    "eslint": "^9.23.0",
     "husky": "^9.1.7",
     "nuxt": "^3.15.4",
     "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.3"
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.8.2"
   }
 }
