@@ -11,7 +11,7 @@
 	const commands: { [key: string]: string | (() => string | Promise<string>) } =
 		{
 			help: 'Available commands: help, joke, hack, sudo, adventure, compliment, clear, exit',
-			sudo: 'Nice try, but you’re not an admin here!',
+			sudo: 'Nice try, but you\'re not an admin here!',
 			hack: 'Initiating hack... just kidding, stay ethical!',
 			compliment: () => {
 				const compliments = [
@@ -25,10 +25,11 @@
   You are in a dark room. There is a door to the left and right.
   Type "left" or "right" to choose a path.
   `,
-			left: 'You found a treasure chest! But it’s locked. The game ends here.',
+			left: 'You found a treasure chest! But it\'s locked. The game ends here.',
 			right: 'You encounter a monster. Game over!',
 			clear: () => {
 				history.value = [];
+				return 'Terminal cleared';
 			},
 			exit: 'Goodbye! Refresh the page to restart the CLI.',
 
@@ -57,7 +58,11 @@
 					: commands[command];
 			history.value.push(`$ ${command}`, response);
 		} else {
-			history.value.push(`$ ${command}`, commands.default);
+			const defaultResponse = 
+				typeof commands.default === 'function'
+					? await commands.default()
+					: commands.default;
+			history.value.push(`$ ${command}`, defaultResponse);
 		}
 
 		currentCommand.value = '';

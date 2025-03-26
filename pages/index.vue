@@ -4,10 +4,5 @@
 		<CliTerminal />
 		<LazyBlogPostList />
 		<LazyLogoCollection />
-
-
-
-
-    
 	</main>
 </template>
