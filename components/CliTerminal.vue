@@ -8,7 +8,7 @@ const history = ref([
   "Type `help` to see a list of available commands.",
 ]);
 
-const commands: { [key: string]: any } = {
+const commands: { [key: string]: string | (() => string | Promise<string>) } = {
   help: 'Available commands: help, joke, hack, sudo, adventure, compliment, clear, exit',
   sudo: 'Nice try, but you’re not an admin here!',
   hack: 'Initiating hack... just kidding, stay ethical!',
@@ -36,6 +36,7 @@ const commands: { [key: string]: any } = {
       const response: Joke = await $fetch('https://v2.jokeapi.dev/joke/Programming?type=twopart');
       return `${response.setup} - ${response.delivery}`;
     } catch (error) {
+      console.error(error);
       return 'Failed to fetch a joke. Please try again later.';
     }
   },
@@ -88,10 +89,10 @@ const focusInput = () => {
           <input
             ref="cliInput"
             v-model="currentCommand"
-            @keydown.enter="executeCommand"
             class="cli-input bg-transparent border-none outline-none text-white flex-grow font-mono text-sm"
             type="text"
-          />
+            @keydown.enter="executeCommand"
+          >
         </div>
       </div>
     </BaseContainer>
