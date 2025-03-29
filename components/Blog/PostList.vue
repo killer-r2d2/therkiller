@@ -1,8 +1,6 @@
 <script setup>
-	const { $blogRepository } = useNuxtApp();
-	const { data: blogPostList } = useAsyncData('blogPostList', () => {
-		return $blogRepository.getAllPosts();
-	});
+	const { getAllPosts } = useBlog();
+	const blogPostList = await getAllPosts();
 </script>
 
 <template>
