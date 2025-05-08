@@ -10,16 +10,10 @@
 		"postinstall": "nuxt prepare",
 		"prepare": "husky",
 		"test": "echo 'test'",
-		"lint": "eslint .",
-		"lint:fix": "eslint . --fix",
 		"prettier": "prettier --write .",
-		"format": "npm-run-all -p lint:fix prettier"
+		"format": "prettier --write ."
 	},
 	"lint-staged": {
-		"*.{js,ts,vue,jsx,tsx}": [
-			"eslint --fix",
-			"prettier --write"
-		],
 		"*.{json,css,scss,md}": [
 			"prettier --write"
 		]
@@ -31,12 +25,8 @@
 		"vue-router": "^4.3.0"
 	},
 	"devDependencies": {
-		"@nuxt/eslint": "^1.2.0",
 		"@tailwindcss/typography": "^0.5.12",
 		"autoprefixer": "^10.4.19",
-		"eslint": "^9.23.0",
-		"eslint-config-prettier": "^10.1.1",
-		"eslint-plugin-prettier": "^5.2.5",
 		"husky": "^9.1.7",
 		"lint-staged": "^15.5.0",
 		"nuxt": "^3.17.0",

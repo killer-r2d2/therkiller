@@ -1,6 +1,6 @@
 <template>
 	<img
-		src="/public/logos/tailwindcss-logotype-white.svg"
+		src="/logos/tailwindcss-logotype-white.svg"
 		alt="tailwindcss-logo"
 	/>
 </template>
