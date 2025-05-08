@@ -9,7 +9,10 @@
 </script>
 
 <template>
-	<NuxtLayout><NuxtPage /></NuxtLayout>
+	<NuxtRouteAnnouncer />
+	<NuxtLayout>
+		<NuxtPage />
+	</NuxtLayout>
 </template>
 
 <style>
