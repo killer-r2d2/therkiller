@@ -1,47 +1,47 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	// Nuxt 3 compatibility
-	future: {
-		compatibilityVersion: 4,
-	},
-	nitro: {
-		// Static generation is used to pre-render your pages as static HTML files. This can greatly improve the performance and SEO of your website.
-		static: true,
-	},
+				// Nuxt 3 compatibility
+				future: {
+								compatibilityVersion: 4,
+				},
+				nitro: {
+								// Static generation is used to pre-render your pages as static HTML files. This can greatly improve the performance and SEO of your website.
+								static: true,
+				},
 
-	routeRules: {
-		'/': { prerender: true }, // Pre-renders the home page
-		'/blog/**': { prerender: true }, // Pre-renders all blog pages
-	},
+				routeRules: {
+								'/': { prerender: true }, // Pre-renders the home page
+								'/blog/**': { prerender: true }, // Pre-renders all blog pages
+				},
 
-	app: {
-		pageTransition: {
-			name: 'page',
-			mode: 'out-in',
-		},
-	},
+				app: {
+								pageTransition: {
+												name: 'page',
+												mode: 'out-in',
+								},
+				},
 
-	image: {
-		format: ['webp'],
-	},
+				image: {
+								format: ['webp'],
+				},
 
-	content: {
-		markdown: {
-			// anchorLinks value false
-			anchorLinks: false,
-		},
-	},
+				content: {
+								markdown: {
+												// anchorLinks value false
+												anchorLinks: false,
+								},
+				},
 
-	css: ['~/assets/css/main.css'],
-	devtools: { enabled: true },
-	modules: ['@nuxt/image', '@nuxt/content'],
+				css: ['~/assets/css/main.css'],
+				devtools: { enabled: true },
+				modules: ['@nuxt/image', '@nuxt/content', '@nuxt/eslint'],
 
-	postcss: {
-		plugins: {
-			tailwindcss: {},
-			autoprefixer: {},
-		},
-	},
+				postcss: {
+								plugins: {
+												tailwindcss: {},
+												autoprefixer: {},
+								},
+				},
 
-	compatibilityDate: '2024-12-21',
+				compatibilityDate: '2024-12-21',
 });

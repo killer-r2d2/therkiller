@@ -100,7 +100,7 @@
 						class="cli-input flex-grow border-none bg-transparent font-mono text-sm text-white outline-none"
 						type="text"
 						@keydown.enter="executeCommand"
-					/>
+					>
 				</div>
 			</div>
 		</BaseContainer>

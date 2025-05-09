@@ -21,7 +21,7 @@
 						class="h-24 w-24 rounded-full object-cover"
 						:src="content.profileImage"
 						alt="Profile image Roger Killer"
-					/>
+					>
 				</div>
 				<div class="mb-8 flex justify-center gap-x-4 lg:mb-0">
 					<SocialLinks />
