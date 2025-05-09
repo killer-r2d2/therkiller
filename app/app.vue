@@ -6,8 +6,6 @@
 		},
 		link: [],
 	});
-
-	var variable = 'hello';
 </script>
 
 <template>
