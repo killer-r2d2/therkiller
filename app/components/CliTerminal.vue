@@ -97,7 +97,7 @@
 					<input
 						ref="cliInput"
 						v-model="currentCommand"
-						class="cli-input flex-grow border-none bg-transparent font-mono text-sm text-white outline-none"
+						class="cli-input grow border-none bg-transparent font-mono text-sm text-white outline-hidden"
 						type="text"
 						@keydown.enter="executeCommand"
 					>

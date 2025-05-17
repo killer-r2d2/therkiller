@@ -1,3 +1,4 @@
+import tailwindcss from "@tailwindcss/vite";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 				// Nuxt 3 compatibility
@@ -31,17 +32,15 @@ export default defineNuxtConfig({
 												anchorLinks: false,
 								},
 				},
+				vite: {
+					plugins: [
+						tailwindcss(),
+					],
+				},
 
 				css: ['~/assets/css/main.css'],
 				devtools: { enabled: true },
 				modules: ['@nuxt/image', '@nuxt/content', '@nuxt/eslint'],
-
-				postcss: {
-								plugins: {
-												tailwindcss: {},
-												autoprefixer: {},
-								},
-				},
 
 				compatibilityDate: '2024-12-21',
 });
