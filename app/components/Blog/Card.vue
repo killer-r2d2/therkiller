@@ -1,6 +1,5 @@
 <script setup lang="ts">
-	// Import the BlogPost type
-	import type { BlogPost } from '@/types/blogPost';
+	import type { BlogPost } from '~/types/blogPost';
 	const props = defineProps<{
 		blogPost: BlogPost;
 	}>();
