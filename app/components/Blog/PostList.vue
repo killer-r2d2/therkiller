@@ -1,21 +1,24 @@
 <script setup>
-	const { getAllPosts } = useBlog();
-	const blogPostList = await getAllPosts();
+const { getAllPosts } = useBlog();
+const blogPostList = await getAllPosts();
 </script>
 
 <template>
 	<BaseSection>
 		<BaseContainer>
-			<h2 class="mb-8 font-sans text-2xl">Blog</h2>
-			<ul class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-				<li
-					v-for="blogPost in blogPostList"
-					:key="blogPost._path"
-					class="group relative col-span-1 flex flex-1 flex-col rounded-2xl bg-primary-900 text-white shadow-2xl"
-				>
-					<BlogCard :blog-post="blogPost" />
-				</li>
-			</ul>
+			<div class="grid grid-cols-12 gap-x-8 gap-y-16">
+				<div class="md:col-span-4 col-span-12">
+					<h2 class="mb-8 font-sans text-2xl">Blog</h2>
+					<p>
+						Why do I write blog posts? It's the joy of discovering new insights and the pleasure of sharing them with others.
+					</p>
+				</div>
+				<ul class="flex flex-col gap-y-8 md:col-span-6 col-span-12 md:col-start-7">
+					<li v-for="blogPost in blogPostList" :key="blogPost._path">
+						<BlogArticle :blog-post="blogPost" />
+					</li>
+				</ul>
+			</div>
 		</BaseContainer>
 	</BaseSection>
 </template>
