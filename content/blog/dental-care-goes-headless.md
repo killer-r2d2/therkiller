@@ -3,7 +3,7 @@ title: Dental Care and headless?
 description: Discover how leveraging Nuxt3, Tailwind CSS, and Strapi transformed the online presence of a dental practice.
 author: '@bruno'
 dates:
-  published: 2024-04-25T00:00:00.000Z
+  published: 2024-02-25T00:00:00.000Z
 image: /zahnarztpraxis-am-alpstein.jpg
 tags: nuxt3, tailwindcss, strapi, headless
 ---
