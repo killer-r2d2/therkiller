@@ -22,7 +22,7 @@ const formatDate = (date: string) => {
       <div>
         <time class="text-sm">{{ formatDate(blogPost.dates.published) }}</time>
         <h1>{{ blogPost.title }}</h1>
-        <p>{{ blogPost.tags }}</p>
+        <p class="text-xs">{{ blogPost.tags }}</p>
       </div>
     </NuxtLink>
   </article>
