@@ -1,5 +1,5 @@
 ---
-title: Form Testing with Playwright, A Game-Changer
+title: Form Testing with Playwright
 description: Discover how Playwright transformed my approach to form testing, making the process faster and more reliable than manual testing.
 author: '@yourname'
 dates:
