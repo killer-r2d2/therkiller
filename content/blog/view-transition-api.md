@@ -62,9 +62,7 @@ Here is an examples of how the View Transition API and @view-transition can be u
 }
 ```
 
-## Benefits of Using the View Transition API
-
-Using the View Transition API and @view-transition can greatly enhance the user experience by providing smoother and more visually appealing transitions. This can lead to increased user engagement and satisfaction. However, it's important to note that not all browsers support the View Transition API yet. Developers should check resources like [Can I use](https://caniuse.com/) to ensure compatibility with their target audience's browsers.
+implemented on  [LCF Group](https://www.lcf.group/de){:target="_blank"}
 
 ## Conclusion
 
