@@ -79,7 +79,7 @@ After installation, you can set up Husky to manage your Git hooks by running:
 npx husky install
 ```
 
-This command will create a `.husky` directory in your project. You can then add hooks, such as a pre-commit hook to run ESLint:
+This command will create a .husky directory in your project. You can then add hooks, such as a pre-commit hook to run ESLint:
 
 ```bash
 npx husky add .husky/pre-commit "npm run lint"
