@@ -36,6 +36,18 @@ Through my experience with Playwright, I've gained valuable insights:
 - **Versatility**: Playwright can be used for both development and live site testing.
 - **Cross-Browser Testing**: Playwright ensures consistent behavior across different browsers, improving overall site reliability.
 
+## Additional Resources
+
+For detailed installation instructions, visit the [Playwright documentation](https://playwright.dev/docs/intro){:target="_blank"}.
+
+## Using UI Mode
+
+I like to use UI Mode for a better developer experience. You can run your tests with the following command:
+
+```bash
+npx playwright test --ui
+```
+
 ## Conclusion
 
-Switching to Playwright for form testing has been a transformative experience. It has not only streamlined my workflow but also provided peace of mind, knowing that my forms are thoroughly tested across all scenarios. If you're still testing forms manually, I highly recommend giving Playwright a try—it’s a game-changer in the world of web development.
+Switching to Playwright for form testing has been a transformative experience. It has not only streamlined my workflow but also provided peace of mind, knowing that my forms are thoroughly tested across all scenarios. If you're still testing forms manually, I highly recommend giving Playwright a try—it's a game-changer in the world of web development.
