@@ -24,10 +24,10 @@ To add the ESLint module to your Nuxt project, run the following command:
 npx nuxi module add eslint
 ```
 
-This command will generate an `eslint.config.mjs` file in your project root, which you can customize as needed. If you're using TypeScript, make sure to install it as well:
+This command will generate an eslint.config.mjs file in your project root, which you can customize as needed. If you're using TypeScript, make sure to install it as well:
 
 ```bash
-yarn add --dev typescript
+npm install -D typescript
 ```
 
 ### Manual Setup
@@ -35,7 +35,7 @@ yarn add --dev typescript
 For a manual setup, you can add the necessary packages using:
 
 ```bash
-yarn add --dev @nuxt/eslint eslint typescript
+npm install -D @nuxt/eslint eslint typescript
 ```
 
 Then, update your `nuxt.config.ts` to include the ESLint module:
