@@ -3,7 +3,7 @@ title: Setting Up ESLint with Nuxt and Husky for Git Hooks
 description: Learn how to integrate ESLint with Nuxt and use Husky for managing Git hooks to ensure code quality and consistency.
 author: '@yourname'
 dates:
-  published: 2024-03-01T00:00:00.000Z
+  published: 2025-03-01T00:00:00.000Z
 image: /path-to-image.jpg
 tags: nuxt, eslint, husky, git-hooks
 ---
