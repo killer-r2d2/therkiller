@@ -41,5 +41,3 @@ The combination of Nuxt3, Tailwind CSS, and Strapi transformed the digital face 
 \- **Tailwind CSS** for its speed and utility-first design philosophy.
 
 \- **Strapi** for its headless, API-first approach to content management.
-
-For fellow developers, this case study demonstrates the effectiveness of integrating these modern technologies to build dynamic, scalable web applications that stand the test of time.
