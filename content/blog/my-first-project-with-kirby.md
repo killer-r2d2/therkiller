@@ -1,5 +1,5 @@
 ---
-title: My First Project with Kirby
+title: Let's Build a Project with Kirby CMS
 description: this is a small description about me for my blog alsdfaldfs alsdfkasfd
 author: '@bruno'
 dates:
