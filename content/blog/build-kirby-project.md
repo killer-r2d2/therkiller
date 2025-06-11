@@ -10,7 +10,7 @@ tags: kirby cms, tailwindcss, alpinejs
 
 # Launching My First Project with Kirby CMS: A Unique, Rapid Development Experience
 
-I'm excited to share my latest project, [Inclousion.ch](https://www.inclousion.ch/), where I ventured into new territories with Kirby CMS, enhanced by the utility-first approach of Tailwind CSS and the simplicity of Alpine.js
+I'm excited to share my latest project, [Inclousion.ch](https://www.inclousion.ch/), where I ventured into new territories with Kirby CMS, enhanced by the utility-first approach of Tailwind CSS and the simplicity of Alpine.js.
 
 ## Introduction to the Project
 
