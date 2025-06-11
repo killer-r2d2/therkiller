@@ -10,7 +10,7 @@ tags: nuxt, eslint, husky, git-hooks
 
 # Setting Up ESLint with Nuxt and Husky for Git Hooks
 
-In this blog post, we will explore how to set up ESLint with Nuxt and integrate Husky for managing Git hooks. This setup will help ensure code quality and consistency across your Nuxt projects.
+lets explore how to set up ESLint with Nuxt and integrate Husky for managing Git hooks. This setup will help ensure code quality and consistency across your Nuxt projects.
 
 ## Setting Up ESLint with Nuxt
 
