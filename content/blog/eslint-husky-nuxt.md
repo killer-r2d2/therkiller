@@ -76,7 +76,7 @@ To streamline the linting process, you can add the following scripts to your pac
 }
 ```
 
-These scripts allow you to run ESLint across your project with npm run lint and automatically fix issues with `npm run lint:fix`. This setup ensures that your code adheres to the defined linting rules, maintaining code quality and consistency.
+These scripts allow you to run ESLint across your project with npm run lint and automatically fix issues with npm run lint:fix. This setup ensures that your code adheres to the defined linting rules, maintaining code quality and consistency.
 
 ## Integrating Husky for Git Hooks
 
