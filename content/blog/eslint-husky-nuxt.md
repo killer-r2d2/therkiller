@@ -51,7 +51,7 @@ export default defineNuxtConfig({
 })
 ```
 
-Create an `eslint.config.mjs` file with your custom configurations:
+Create an eslint.config.mjs file with your custom configurations:
 
 ```javascript
 import withNuxt from './.nuxt/eslint.config.mjs'
@@ -60,6 +60,23 @@ export default withNuxt(
   // your custom flat configs go here
 )
 ```
+
+## NPM Scripts for ESLint
+
+To streamline the linting process, you can add the following scripts to your `package.json` file:
+
+```json
+{
+  "scripts": {
+    // ... existing scripts ...
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    // ... other scripts ...
+  }
+}
+```
+
+These scripts allow you to run ESLint across your project with `npm run lint` and automatically fix issues with `npm run lint:fix`. This setup ensures that your code adheres to the defined linting rules, maintaining code quality and consistency.
 
 ## Integrating Husky for Git Hooks
 
