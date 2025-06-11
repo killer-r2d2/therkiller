@@ -38,7 +38,7 @@ For a manual setup, you can add the necessary packages using:
 npm install -D @nuxt/eslint eslint typescript
 ```
 
-Then, update your `nuxt.config.ts` to include the ESLint module:
+Then, update your nuxt.config.ts to include the ESLint module:
 
 ```typescript
 export default defineNuxtConfig({
@@ -63,7 +63,7 @@ export default withNuxt(
 
 ## NPM Scripts for ESLint
 
-To streamline the linting process, you can add the following scripts to your `package.json` file:
+To streamline the linting process, you can add the following scripts to your package.json file:
 
 ```json
 {
@@ -76,7 +76,7 @@ To streamline the linting process, you can add the following scripts to your `pa
 }
 ```
 
-These scripts allow you to run ESLint across your project with `npm run lint` and automatically fix issues with `npm run lint:fix`. This setup ensures that your code adheres to the defined linting rules, maintaining code quality and consistency.
+These scripts allow you to run ESLint across your project with npm run lint and automatically fix issues with `npm run lint:fix`. This setup ensures that your code adheres to the defined linting rules, maintaining code quality and consistency.
 
 ## Integrating Husky for Git Hooks
 
