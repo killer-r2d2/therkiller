@@ -16,8 +16,12 @@ const logout = async () => {
 
 <template>
 	<div>
-		<h1>Dashboard</h1>
-		<p>Welcome, {{ user?.email }}</p>
-		<button @click="logout">Logout</button>
+		<BaseSection>
+			<BaseContainer>
+				<h1>Dashboard</h1>
+				<p>Welcome, {{ user?.email }}</p>
+				<button @click="logout">Logout</button>
+			</BaseContainer>
+		</BaseSection>
 	</div>
 </template>

@@ -4,11 +4,11 @@ import { SpeedInsights } from "@vercel/speed-insights/nuxt"
 
 <template>
 	<div class="bg-black flex min-h-screen flex-col text-white">
+		<Navigation />
 		<div class="grow">
-			<Navigation />
 			<NuxtPage />
-			<Footer />
 		</div>
+		<Footer />
 		<SpeedInsights />
 	</div>
 </template>
