@@ -63,6 +63,7 @@
 		:aria-label="item.name"
 		target="_blank"
 	>
+		<span class="sr-only">{{ item.name }}</span>
 		<component :is="item.icon" class="h-8 w-8" aria-hidden="true" />
 	</a>
 </template>
