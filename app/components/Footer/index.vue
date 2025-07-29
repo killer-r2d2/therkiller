@@ -5,7 +5,7 @@
 		<BaseSection>
 			<BaseContainer>
 				<div class="flex flex-col items-center text-center">
-					<p class="text-primary-400 text-sm  mb-4">therkiller.dev</p>
+					<NuxtLink to="/" class="text-primary-400 text-sm mb-4">therkiller.dev</NuxtLink>
 					<div class="gap-x-4 flex flex-row">
 						<SocialLinks />
 					</div>
