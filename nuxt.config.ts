@@ -13,6 +13,7 @@ export default defineNuxtConfig({
 	routeRules: {
 		'/': { prerender: true }, // Pre-renders the home page
 		'/blog/**': { prerender: true }, // Pre-renders all blog pages
+		'/.well-known/**': { redirect: '/' }, // Handle Chrome DevTools requests
 	},
 
 	app: {
