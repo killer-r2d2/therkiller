@@ -5,23 +5,29 @@ const supabase = useSupabaseClient();
 const email = ref('');
 const password = ref('');
 const isLoading = ref(false);
+const errorMessage = ref('');
 
 const handleSubmit = async () => {
 	isLoading.value = true;
+	errorMessage.value = ''; // Clear previous errors
 	try {
 		const { data, error } = await supabase.auth.signInWithPassword({
 			email: email.value,
 			password: password.value,
 		});
-		console.log('data', data);
-		console.log('error', error);
+
+		if (error) {
+			errorMessage.value = error.message;
+			return;
+		}
 
 		// Redirect to dashboard if login is successful
-		if (!error && data.user) {
+		if (data.user) {
 			await navigateTo('/dashboard');
 		}
 	} catch (err) {
 		console.error('Login error:', err);
+		errorMessage.value = 'An unexpected error occurred. Please try again.';
 	} finally {
 		isLoading.value = false;
 	}
@@ -69,7 +75,7 @@ const handleSubmit = async () => {
 
 						<div>
 							<button type="submit" :disabled="isLoading"
-								class="flex w-full justify-center rounded-md bg-primary-400 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-transparent hover:text-primary-400 transition-all duration-200 focus-visible:outline-2 border-2 border-primary-400 focus-visible:outline-offset-2 hover:border-primary-400 focus-visible:outline-primary-400 disabled:bg-primary-500/50 disabled:cursor-not-allowed cursor-pointer">
+								class="flex w-full justify-center rounded-md bg-transparent px-3 py-1.5 text-sm/6 font-semibold text-primary-400 shadow-xs hover:text-white transition-all duration-200 focus-visible:outline-2 border-2 border-primary-400 focus-visible:outline-offset-2 hover:bg-primary-400 hover:border-primary-400 focus-visible:outline-primary-400 disabled:bg-primary-500/50 disabled:cursor-not-allowed cursor-pointer">
 								<span v-if="!isLoading">Sign in</span>
 								<span v-else class="flex items-center">
 									<svg class="animate-spin -ml-1 mr-3 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -84,6 +90,11 @@ const handleSubmit = async () => {
 							</button>
 						</div>
 					</form>
+					<!-- Error Message -->
+					<div v-if="errorMessage"
+						class="mt-4 p-3 rounded-md bg-red-500/10 border border-red-500/50 text-red-400 text-sm">
+						{{ errorMessage }}
+					</div>
 				</div>
 			</div>
 		</BaseContainer>
