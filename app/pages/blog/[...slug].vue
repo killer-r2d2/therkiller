@@ -5,7 +5,7 @@
 				<!-- create a back button -->
 				<NuxtLink to="/" class="mb-8 max-w-max text-primary-400 inline-flex items-center gap-2">
 					<Icon name="lucide:arrow-left" size="26" style="color: text-primary-400" />
-					bring me home
+					back
 				</NuxtLink>
 
 				<!-- Display the content only if the blogPost is available -->
