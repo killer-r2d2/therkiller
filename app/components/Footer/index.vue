@@ -5,7 +5,7 @@
 		<BaseSection>
 			<BaseContainer>
 				<div class="flex flex-col items-center text-center">
-					<p class="text-primary-400  mb-4">Roger Killer</p>
+					<p class="text-primary-400 text-sm  mb-4">Roger Killer</p>
 					<div class="gap-x-4 flex flex-row">
 						<SocialLinks />
 					</div>
