@@ -8,6 +8,7 @@
       <BaseContainer class="flex justify-end">
         <NuxtLink to="/login"
           class="flex items-center text-right text-primary-400 hover:text-primary-300 transition-colors duration-200">
+          <span class="sr-only">Go to Login Page</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round"
