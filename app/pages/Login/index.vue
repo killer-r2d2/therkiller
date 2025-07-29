@@ -37,17 +37,6 @@ const handleSubmit = async () => {
 <template>
 	<BaseSection>
 		<BaseContainer>
-			<div class="flex justify-center items-center">
-				<NuxtLink to="/"
-					class="inline-flex items-center text-primary-400 hover:text-primary-300 transition-colors duration-200 mb-4">
-
-					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-						stroke="currentColor" class="size-6">
-						<path stroke-linecap="round" stroke-linejoin="round"
-							d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-					</svg>
-				</NuxtLink>
-			</div>
 			<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
 				<div class="sm:mx-auto sm:w-full sm:max-w-sm">
 					<h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-white">Sign in to your account</h2>
