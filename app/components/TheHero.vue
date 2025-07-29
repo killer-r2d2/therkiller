@@ -5,7 +5,7 @@
 </script>
 
 <template>
-	<BaseSection>
+	<BaseSection class="mt-0 md:mt-0 lg:mt-0">
 		<BaseContainer>
 			<div class="text-center">
 				<h1
