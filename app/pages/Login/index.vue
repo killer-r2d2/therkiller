@@ -36,7 +36,7 @@ const handleSubmit = async () => {
 
 <template>
 	<main>
-		<BaseSection>
+		<BaseSection class="mt-12 md:mt-12 lg:mt-12">
 			<BaseContainer>
 				<h2 class="mb-10 text-center font-bold tracking-tight text-white">Sign in to your account</h2>
 				<div class="sm:mx-auto sm:w-full sm:max-w-sm">
