@@ -1,7 +1,4 @@
 <script setup>
-// Add a 5-second delay to see the fallback
-const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-await delay(500);
 
 const { getAllPosts } = useBlog();
 const blogPostList = await getAllPosts();
