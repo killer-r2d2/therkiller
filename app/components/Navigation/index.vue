@@ -4,7 +4,7 @@
 
 <template>
   <nav class="my-12 md:my-12 lg:my-24 ">
-    <div class="flex justify-center">
+    <div class="flex justify-end container">
       <div class="border-2 border-primary-400/20 bg-primary-400/20 backdrop-blur-[1px] max-w-max flex items-center justify-center gap-x-4 rounded-full p-2">
         <NuxtLink to="/"
           class="flex items-center justify-center w-[26px] h-[26px] text-primary-400 hover:text-primary-300 transition-colors duration-200">
