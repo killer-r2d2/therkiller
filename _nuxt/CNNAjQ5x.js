@@ -1,0 +1,1 @@
+import{_ as n}from"./DlAUqK2U.js";import{c as o,e as t,E as s}from"./DvzrLIH0.js";const c={},r={class:"container mx-auto"};function _(e,a){return t(),o("div",r,[s(e.$slots,"default")])}const f=Object.assign(n(c,[["render",_]]),{__name:"BaseContainer"});export{f as _};

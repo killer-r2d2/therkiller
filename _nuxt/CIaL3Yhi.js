@@ -1,0 +1,1 @@
+import{_ as o}from"./DlAUqK2U.js";import{c as s,e as t,E as n}from"./DvzrLIH0.js";const c={},_={class:"my-12 md:my-24 lg:my-44"};function r(e,a){return t(),s("section",_,[n(e.$slots,"default")])}const l=Object.assign(o(c,[["render",r]]),{__name:"BaseSection"});export{l as _};

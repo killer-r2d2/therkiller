@@ -1,1 +1,0 @@
-import{c as t,e as c,h as o,g as s,at as a}from"./BWl6JqDj.js";import{_ as n}from"./DlAUqK2U.js";const _={},r={class:"bg-black flex min-h-screen flex-col text-white"},l={class:"grow"};function d(f,i){const e=a;return c(),t("div",r,[o("div",l,[s(e)])])}const p=n(_,[["render",d]]);export{p as default};
