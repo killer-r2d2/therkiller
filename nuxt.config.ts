@@ -44,19 +44,7 @@ export default defineNuxtConfig({
 		'@nuxt/content',
 		'@nuxt/eslint',
 		'@nuxt/icon',
-		'@nuxtjs/supabase',
 	],
-
-	supabase: {
-		redirect: false,
-	},
-	runtimeConfig: {
-		public: {
-			supabaseUrl: process.env.SUPABASE_URL,
-			supabaseAnonKey: process.env.SUPABASE_ANON_KEY,
-			supabaseServiceKey: process.env.SUPABASE_SERVICE_KEY,
-		},
-	},
 
 	compatibilityDate: '2024-12-21',
 });

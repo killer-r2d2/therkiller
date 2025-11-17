@@ -1,16 +1,7 @@
 <script setup lang="ts">
-const supabase = useSupabaseClient();
-
-
-const { data: { user } } = await supabase.auth.getUser();
-
-if (!user) {
-	await navigateTo('/login');
-}
-
 const logout = async () => {
-	await supabase.auth.signOut();
-	await navigateTo('/login');
+	// Authentication is currently disabled - Supabase has been removed
+	await navigateTo('/');
 };
 </script>
 
@@ -19,7 +10,7 @@ const logout = async () => {
 		<BaseSection>
 			<BaseContainer>
 				<h1>Dashboard</h1>
-				<p>Welcome, {{ user?.email }}</p>
+				<p>Welcome to Dashboard</p>
 				<button @click="logout">Logout</button>
 			</BaseContainer>
 		</BaseSection>
