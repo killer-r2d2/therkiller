@@ -1,3 +1,20 @@
+<script setup lang="ts">
+const route = useRoute();
+
+const slugParam = route.params.slug;
+const slugSegments = Array.isArray(slugParam)
+	? slugParam
+	: typeof slugParam === 'string'
+		? [slugParam]
+		: [];
+
+const blogContentPath = `/blog/${slugSegments.join('/')}`;
+
+const { data: blogPost } = await useAsyncData(`blogPost:${blogContentPath}`, () =>
+	queryCollection('content').path(blogContentPath).first()
+);
+</script>
+
 <template>
 	<main>
 		<BaseSection>
@@ -9,9 +26,14 @@
 				</NuxtLink>
 
 				<!-- Display the content only if the blogPost is available -->
-				<ContentDoc
+				<ContentRenderer
+					v-if="blogPost"
+					:value="blogPost"
 					class="prose text-white prose-headings:text-white prose-p:font-serif prose-a:text-white prose-strong:font-serif prose-strong:text-primary-400 prose-li:font-serif"
 				/>
+				<p v-else class="text-white">
+					Post not found.
+				</p>
 			</BaseContainer>
 		</BaseSection>
 	</main>

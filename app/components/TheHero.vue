@@ -1,7 +1,7 @@
-<script setup>
-	const { data: content } = await useAsyncData('home', () =>
-		queryContent('/').findOne()
-	);
+<script setup lang="ts">
+const { data: homePage } = await useAsyncData('home', () =>
+	queryCollection('content').path('/').first()
+);
 </script>
 
 <template>
@@ -11,15 +11,19 @@
 				<h1
 					class="mt-1 text-4xl font-bold tracking-tight sm:text-6xl lg:text-6xl"
 				>
-					{{ content.title }}
+					{{ homePage?.title }}
 				</h1>
 				<div class="mx-auto mb-8 mt-5 max-w-2xl">
-					<ContentDoc class="a:underline text-white" />
+					<ContentRenderer
+						v-if="homePage"
+						:value="homePage"
+						class="a:underline text-white"
+					/>
 				</div>
 				<div class="mb-8 flex justify-center">
 					<img
 						class="h-24 w-24 rounded-full object-cover"
-						:src="content.profileImage"
+						:src="homePage?.profileImage"
 						alt="Profile image Roger Killer"
 					>
 				</div>

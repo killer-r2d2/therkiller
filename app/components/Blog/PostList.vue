@@ -14,7 +14,7 @@ const blogPostList = await getAllPosts();
 					</p>
 				</div>
 				<ul class="flex flex-col gap-y-8 md:col-span-6 col-span-12 md:col-start-7">
-					<li v-for="blogPost in blogPostList" :key="blogPost._path">
+					<li v-for="blogPost in blogPostList" :key="blogPost.path">
 						<BlogArticle :blog-post="blogPost" />
 					</li>
 				</ul>

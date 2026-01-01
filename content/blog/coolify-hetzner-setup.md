@@ -1,5 +1,5 @@
 ---
-title: Setting Up Coolify on Hetzner with a Custom Domain
+title: Setting Up Coolify on Hetzner
 description: A step-by-step guide to installing Coolify on a Hetzner Cloud server, including SSH setup, DNS configuration, and HTTPS with Let's Encrypt.
 author: '@therkiller'
 dates:
