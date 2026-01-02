@@ -18,7 +18,7 @@ This post summarizes how we set up **Coolify on a Hetzner Cloud server**, connec
 
 At the end of this setup, Coolify is accessible at:
 
-- `https://coolify.therkiller.dev`
+https://coolify.therkiller.dev
 
 with:
 
@@ -30,7 +30,7 @@ with:
 ## Prerequisites
 
 - Hetzner Cloud account
-- A registered domain (here: `therkiller.dev`) managed at hosttech
+- A registered domain (here: therkiller.dev) managed at hosttech
 - Local machine with SSH (macOS)
 - Basic terminal knowledge
 
@@ -38,7 +38,7 @@ with:
 
 To keep this project isolated from existing keys, we created a separate keypair:
 
-```bash
+```
 ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_therkiller -C "therkiller.dev"
 ```
 
@@ -64,7 +64,7 @@ Host therkiller-coolify
 
 Then we connected using:
 
-```bash
+```
 ssh therkiller-coolify
 ```
 
@@ -85,7 +85,7 @@ We skipped optional features like Volumes, Placement Groups, and Cloud-Init to k
 
 On the server, we ran the official install script:
 
-```bash
+```
 curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash
 ```
 
@@ -136,14 +136,13 @@ In newer Coolify versions, SSL is handled automatically once the HTTPS domain is
 
 Because the wildcard record existed, DNS propagation and caching caused temporary issues:
 
-- `nslookup coolify.therkiller.dev` initially returned the wildcard IP (76.76.21.21)
+- nslookup coolify.therkiller.dev initially returned the wildcard IP (76.76.21.21)
 - Coolify failed DNS validation (Validating DNS failed)
 
 Once DNS propagated correctly, nslookup returned the right server IP:
 
-```bash
+```
 nslookup coolify.therkiller.dev
-# Address: 46.224.144.135
 ```
 
 After that, saving the instance settings again triggered SSL issuance successfully.
