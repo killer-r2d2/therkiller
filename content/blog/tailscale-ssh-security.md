@@ -28,7 +28,7 @@ That hint gave me a direction.
 
 ## Discovering Tailscale
 
-Tailscale turned out to be surprisingly simple to understand. It creates a private network between your devices using WireGuard under the hood. Every device gets an internal IP in the `100.x.x.x` range, and traffic between them is encrypted and peer-to-peer.
+Tailscale turned out to be surprisingly simple to understand. It creates a private network between your devices using WireGuard under the hood. Every device gets an internal IP in the 100.x.x.x range, and traffic between them is encrypted and peer-to-peer.
 
 What I liked most: no port forwarding, no complex VPN configuration. You install it, log in, and your devices can talk to each other privately. That was exactly the kind of simplicity I was looking for.
 
