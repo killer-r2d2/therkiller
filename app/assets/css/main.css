@@ -74,4 +74,23 @@
 	a {
 		@apply underline hover:opacity-80;
 	}
+	.prose pre,
+	.prose code,
+	.prose pre *,
+	.prose code * {
+		font-family: var(--font-mono, monospace);
+	}
+	.prose pre.shiki code .line,
+	.prose pre.shiki code .line span,
+	.prose code.shiki .line,
+	.prose code.shiki .line span {
+		color: #fff;
+	}
+	.prose :not(pre) > code {
+		color: #fff;
+	}
+	.prose blockquote,
+	.prose blockquote p {
+		color: #fff;
+	}
 }

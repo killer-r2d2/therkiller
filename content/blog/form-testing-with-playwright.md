@@ -44,7 +44,7 @@ For detailed installation instructions, visit the [Playwright documentation](htt
 
 I like to use UI Mode for a better developer experience. You can run your tests with the following command:
 
-```bash
+```
 npx playwright test --ui
 ```
 

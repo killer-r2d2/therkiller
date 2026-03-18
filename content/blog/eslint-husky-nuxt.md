@@ -20,13 +20,13 @@ ESLint is a powerful tool for identifying and fixing problems in your JavaScript
 
 To add the ESLint module to your Nuxt project, run the following command:
 
-```bash
+```
 npx nuxi module add eslint
 ```
 
 This command will generate an eslint.config.mjs file in your project root, which you can customize as needed. If you're using TypeScript, make sure to install it as well:
 
-```bash
+```
 npm install -D typescript
 ```
 
@@ -34,7 +34,7 @@ npm install -D typescript
 
 For a manual setup, you can add the necessary packages using:
 
-```bash
+```
 npm install -D @nuxt/eslint eslint typescript
 ```
 
@@ -86,19 +86,19 @@ Husky is a tool that enhances your Git workflow by allowing you to run scripts a
 
 To get started with Husky, install it in your project:
 
-```bash
+```
 npm install husky --save-dev
 ```
 
 After installation, you can set up Husky to manage your Git hooks by running:
 
-```bash
+```
 npx husky install
 ```
 
 This command will create a .husky directory in your project. You can then add hooks, such as a pre-commit hook to run ESLint:
 
-```bash
+```
 npx husky add .husky/pre-commit "npm run lint"
 ```
 
