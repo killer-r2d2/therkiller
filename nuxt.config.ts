@@ -27,12 +27,6 @@ export default defineNuxtConfig({
 		format: ['webp'],
 	},
 
-	content: {
-		markdown: {
-			// anchorLinks value false
-			anchorLinks: false,
-		},
-	},
 	vite: {
 		plugins: [tailwindcss()],
 	},
