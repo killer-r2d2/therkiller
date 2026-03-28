@@ -1,6 +1,6 @@
 <script setup>
 	useHead({
-		title: 'the rkiller.dev',
+		title: 'therkiller.dev',
 		htmlAttrs: {
 			lang: 'en',
 		},
