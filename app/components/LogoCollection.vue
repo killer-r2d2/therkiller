@@ -58,19 +58,6 @@
 				</NuxtLink>
 
 				<NuxtLink
-					to="https://nextjs.org/"
-					target="_blank"
-					aria-label="Visit Nextjs"
-					class="scale-100 transform transition-all duration-300 hover:scale-110"
-				>
-					<div
-						class="flex h-full items-center justify-center rounded-lg border-2 border-white p-4"
-					>
-						<LogoNextjs class="max-w-24" />
-					</div>
-				</NuxtLink>
-
-				<NuxtLink
 					to="https://supabase.com/"
 					target="_blank"
 					aria-label="Visit Supabase"
@@ -82,6 +69,16 @@
 						<LogoSupabase class="max-w-24" />
 					</div>
 				</NuxtLink>
+
+				<div
+					class="scale-100 transform transition-all duration-300 hover:scale-110"
+				>
+					<div
+						class="flex h-full items-center justify-center rounded-lg border-2 border-white p-4"
+					>
+						<LogoHTMLCSSJACASCRIPT class="max-w-24" />
+					</div>
+				</div>
 			</div>
 		</BaseContainer>
 	</BaseSection>
