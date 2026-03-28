@@ -58,15 +58,15 @@
 				</NuxtLink>
 
 				<NuxtLink
-					to="https://supabase.com/"
+					to="https://coolify.io/"
 					target="_blank"
-					aria-label="Visit Supabase"
-					class="scale-100 transform transition-all duration-300 hover:scale-110"
+					aria-label="Visit Coolify"
+					class="scale-100 transform no-underline transition-all duration-300 hover:scale-110"
 				>
 					<div
 						class="flex h-full items-center justify-center rounded-lg border-2 border-white p-4"
 					>
-						<LogoSupabase class="max-w-24" />
+						<LogoCoolify class="max-w-24" />
 					</div>
 				</NuxtLink>
 
