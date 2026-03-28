@@ -39,12 +39,7 @@ export default defineNuxtConfig({
 
 	css: ['~/assets/css/main.css'],
 	devtools: { enabled: true },
-	modules: [
-		'@nuxt/image',
-		'@nuxt/content',
-		'@nuxt/eslint',
-		'@nuxt/icon',
-	],
+	modules: ['@nuxt/image', '@nuxt/content', '@nuxt/eslint', '@nuxt/icon'],
 
-	compatibilityDate: '2024-12-21',
+	compatibilityDate: '2026-03-28',
 });
