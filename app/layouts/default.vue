@@ -5,6 +5,5 @@
 			<NuxtPage />
 		</div>
 		<Footer />
-		<SpeedInsights />
 	</div>
 </template>
