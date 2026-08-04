@@ -38,9 +38,10 @@
   --theme-border: #d8d4cc;
   --theme-accent: #0b6570;
   --theme-accent-hover: #084c54;
-  --theme-logo-surface: #131722;
-  --theme-logo-foreground: #f7f8fa;
-  --theme-logo-border: #303746;
+  --theme-logo-surface: transparent;
+  --theme-logo-foreground: #17181c;
+  --theme-logo-border: #17181c;
+  --theme-logo-wordmark-overlay-opacity: 1;
   --theme-code-background: #ece9e3;
   --theme-code-foreground: #17181c;
   --theme-code-border: #d0cbc2;
@@ -58,6 +59,7 @@
   --theme-logo-surface: #151923;
   --theme-logo-foreground: #f3f5f7;
   --theme-logo-border: #343d4b;
+  --theme-logo-wordmark-overlay-opacity: 0;
   --theme-code-background: #1e293b;
   --theme-code-foreground: #e5e7eb;
   --theme-code-border: #364152;
@@ -76,6 +78,7 @@
     --theme-logo-surface: #151923;
     --theme-logo-foreground: #f3f5f7;
     --theme-logo-border: #343d4b;
+    --theme-logo-wordmark-overlay-opacity: 0;
     --theme-code-background: #1e293b;
     --theme-code-foreground: #e5e7eb;
     --theme-code-border: #364152;
@@ -118,6 +121,16 @@
 
 
 @layer utilities {
+	.logo-wordmark-overlay {
+		position: absolute;
+		inset: 0;
+		height: 100%;
+		width: 100%;
+		clip-path: inset(0 0 0 var(--logo-wordmark-start));
+		filter: brightness(0);
+		opacity: var(--theme-logo-wordmark-overlay-opacity);
+	}
+
   @font-face {
     font-family: 'Lato';
     font-weight: 700;
