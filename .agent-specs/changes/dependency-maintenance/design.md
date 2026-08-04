@@ -48,6 +48,8 @@ This batch is first because all later Nuxt modules should be evaluated against t
 
 The current source scan found only the module registration and `image.format` configuration, so no component migration is expected.
 
+Implementation result on 2026-08-04: the source scan confirmed that there are no `NuxtImg` or `NuxtPicture` components, custom providers, or `xs`/`xxl` screen modifiers. Nuxt Image 2.1.0 accepts the existing WebP configuration without changes. Its IPX 4 and Sharp 0.35.3 dependency chain preserves the Linux musl packages required by the Alpine build and reduces the npm audit result from three high-severity findings to zero.
+
 ### Batch 3: Nuxt Icon 2
 
 1. Upgrade `@nuxt/icon` to 2.x together with the compatible Lucide collection release.

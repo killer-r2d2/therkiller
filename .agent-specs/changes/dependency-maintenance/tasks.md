@@ -24,12 +24,12 @@ The implementation is split into four update pull requests followed by a consoli
 
 ## Pull Request 2: Nuxt Image 2
 
-- [ ] T015 After Pull Request 1 is merged, create `codex/nuxt-image-2` from the latest `main`.
-- [ ] T016 Use the Nuxt MCP to review the current Nuxt Image 2 migration guide and confirm compatibility with the installed Nuxt version.
-- [ ] T017 Search for `NuxtImg`, `NuxtPicture`, custom image providers, and `xs`/`xxl` image screen modifiers; record whether the source still has only `nuxt.config.ts` module and format configuration.
-- [ ] T018 Upgrade `@nuxt/image` to the approved 2.x release and apply only migration changes required by actual repository usage.
-- [ ] T019 Run `npm ci`, `npm run lint`, and `npm run generate`; inspect representative generated pages and image asset URLs for missing or malformed output.
-- [ ] T020 Review the manifest and lockfile diff, then run `therkiller-spec-verify` and `therkiller-ship` for the isolated module-major pull request.
+- [x] T015 After Pull Request 1 is merged, create `codex/nuxt-image-2` from the latest `main`.
+- [x] T016 Use the Nuxt MCP to review the current Nuxt Image 2 migration guide and confirm compatibility with the installed Nuxt version.
+- [x] T017 Search for `NuxtImg`, `NuxtPicture`, custom image providers, and `xs`/`xxl` image screen modifiers; record whether the source still has only `nuxt.config.ts` module and format configuration.
+- [x] T018 Upgrade `@nuxt/image` to the approved 2.x release and apply only migration changes required by actual repository usage.
+- [x] T019 Run `npm ci`, `npm run lint`, and `npm run generate`; inspect representative generated pages and image asset URLs for missing or malformed output.
+- [x] T020 Review the manifest and lockfile diff, then run `therkiller-spec-verify` and `therkiller-ship` for the isolated module-major pull request.
 
 ## Pull Request 3: Nuxt Icon 2
 
