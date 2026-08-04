@@ -65,6 +65,8 @@ Implementation result on 2026-08-04: Nuxt Icon 2.4.1 retains the existing `<Icon
 3. Remove `lint-staged` and the unused `lint-staged` block from `package.json`; keep the existing Husky hook running the full repository lint command.
 4. Keep TypeScript on 5.9.x until current Nuxt support for TypeScript 7 is confirmed through official Nuxt sources and a separate compatibility review.
 
+Implementation result on 2026-08-04: `prettier-plugin-tailwindcss` 0.8.1 is the current approved release and remains compatible with Prettier 3.9.6 and the Node 22 production baseline. The required Tailwind 4 `tailwindStylesheet` option points to `app/assets/css/main.css`, while the plugin remains last in the Prettier plugin list. The pre-upgrade Prettier check reported 43 existing formatting deviations. Enabling the Tailwind 4 stylesheet exposed one additional class-order deviation in `app/components/Navigation/index.vue`; formatting only that file returned the check to the same 43-file baseline, so no unrelated repository-wide formatting sweep was applied. The unused `lint-staged` package and configuration were removed, the Husky hook remains unchanged, and the direct TypeScript range now explicitly targets 5.9.x.
+
 ### Batch 5: Final Consolidated Verification
 
 1. Install from the committed lockfile with `npm ci`.
@@ -78,7 +80,9 @@ Implementation result on 2026-08-04: Nuxt Icon 2.4.1 retains the existing `<Icon
 - `package.json`: version ranges, the Nuxt-compatible `nostics` pin, removal of `lint-staged`, and removal of its unused configuration.
 - `package-lock.json`: npm-managed resolution changes for every batch.
 - `nuxt.config.ts`: only if Nuxt Image 2 or Nuxt Icon 2 requires a documented configuration migration.
+- `.prettierrc`: Tailwind 4 stylesheet entry for the upgraded class-sorting plugin.
 - `.husky/pre-commit`: expected to remain `npm run lint`; change only if the accepted lint-staged decision changes.
+- `app/components/Navigation/index.vue`: isolated mechanical class-order update required by the Tailwind 4-aware formatter.
 - `app/pages/blog/[...slug].vue`: verification target for the existing Lucide icon, not an expected edit.
 - `Dockerfile`: verification target for Node 22 Alpine compatibility, not an expected edit.
 - `.agent-specs/changes/dependency-maintenance/`: durable decisions and implementation progress.

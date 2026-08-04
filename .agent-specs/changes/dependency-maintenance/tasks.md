@@ -42,14 +42,14 @@ The implementation is split into four update pull requests followed by a consoli
 
 ## Pull Request 4: Formatting Tooling And Cleanup
 
-- [ ] T027 After Pull Request 3 is merged, create `codex/dependency-tooling-cleanup` from the latest `main`.
-- [ ] T028 Run `npx prettier --check .` with the current plugin and save the baseline result in implementation notes.
-- [ ] T029 Upgrade `prettier-plugin-tailwindcss` to the approved 0.8.x release and run `npx prettier --check .` again.
-- [ ] T030 If formatting changes are required, apply them as a separate mechanical commit and review the diff for class-order changes or non-formatting edits.
-- [ ] T031 Remove `lint-staged` from `devDependencies` and remove the unused `lint-staged` block from `package.json`; leave `.husky/pre-commit` running `npm run lint`.
-- [ ] T032 Keep `typescript` within the supported 5.9.x line and document TypeScript 7 as deferred pending explicit Nuxt ecosystem support.
-- [ ] T033 Run `npm ci`, `npx prettier --check .`, `npm run lint`, and `npm run generate`; compare results to the baseline.
-- [ ] T034 Review the manifest and lockfile diff, then run `therkiller-spec-verify` and `therkiller-ship` for the tooling pull request.
+- [x] T027 After Pull Request 3 is merged, create `codex/dependency-tooling-cleanup` from the latest `main`.
+- [x] T028 Run `npx prettier --check .` with the current plugin and save the baseline result in implementation notes.
+- [x] T029 Upgrade `prettier-plugin-tailwindcss` to the approved 0.8.x release and run `npx prettier --check .` again.
+- [x] T030 If formatting changes are required, apply them as a separate mechanical commit and review the diff for class-order changes or non-formatting edits.
+- [x] T031 Remove `lint-staged` from `devDependencies` and remove the unused `lint-staged` block from `package.json`; leave `.husky/pre-commit` running `npm run lint`.
+- [x] T032 Keep `typescript` within the supported 5.9.x line and document TypeScript 7 as deferred pending explicit Nuxt ecosystem support.
+- [x] T033 Run `npm ci`, `npx prettier --check .`, `npm run lint`, and `npm run generate`; compare results to the baseline.
+- [x] T034 Review the manifest and lockfile diff, then run `therkiller-spec-verify` and `therkiller-ship` for the tooling pull request.
 
 ## Consolidated Verification And Documentation
 
