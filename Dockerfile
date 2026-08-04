@@ -3,6 +3,8 @@ FROM node:22-alpine AS build
 
 WORKDIR /app
 
+RUN npm install --global npm@10.9.8
+
 COPY package.json package-lock.json ./
 RUN npm ci
 
