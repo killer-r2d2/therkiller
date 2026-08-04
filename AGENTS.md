@@ -79,7 +79,7 @@ Spec rules:
 - Do not treat stale specs as higher authority than current product, design, Jira, code, or user instructions.
 - After a change is merged and its final verification is complete, move its entire directory from `.agent-specs/changes/` to `.agent-specs/archive/`.
 - Treat archived specs as historical context only. They do not define the accepted scope of new work.
-- Keep `.agent-specs/changes/.gitkeep` so the active-change directory remains available when no change spec is in progress.
+- The active-change directory may be absent when no change spec is in progress; create it with the next change spec.
 
 ## Shared Agent Workflows
 
