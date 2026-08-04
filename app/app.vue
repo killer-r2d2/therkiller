@@ -2,6 +2,7 @@
 	useHead({
 		title: 'therkiller.dev',
 		htmlAttrs: {
+			class: 'dark',
 			lang: 'en',
 		},
 		link: [
