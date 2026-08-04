@@ -1,0 +1,11 @@
+---
+description: Use before pull request creation, code review, branch takeover, or when review risk areas should be classified.
+globs:
+alwaysApply: false
+---
+
+# therkiller Triage
+
+Follow `.agent-workflows/triage.md`.
+
+Use `AGENTS.md` as the project baseline. Return concise High/Medium/Low review risks with concrete paths and reasons.

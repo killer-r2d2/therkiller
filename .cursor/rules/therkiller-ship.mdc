@@ -1,0 +1,11 @@
+---
+description: Use after implementation to verify, commit, push, and prepare a fully described manual pull-request handoff.
+globs:
+alwaysApply: false
+---
+
+# therkiller Ship
+
+Follow `.agent-workflows/ship.md`.
+
+Use `AGENTS.md` as the project baseline and the PR-readiness workflow as the delivery gate. Do not create or update a pull request; report `Prepared` with copy-ready pull-request metadata after the branch is pushed.
