@@ -6,7 +6,7 @@
 	>
 		<NuxtLink
 			to="/"
-			class="text-primary-400 hover:text-primary-300 h-[26px] w-[26px] items-center justify-center transition-colors duration-200"
+			class="hover:text-primary-300 h-[26px] w-[26px] items-center justify-center text-primary-400 transition-colors duration-200"
 		>
 			therkiller.dev
 		</NuxtLink>
