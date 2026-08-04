@@ -3,7 +3,7 @@
 ## Implementation
 
 - [x] T001 Add semantic light and dark palette tokens, base color behavior, focus treatment, and reduced-motion handling in `app/assets/css/main.css`.
-- [x] T002 Add the pre-paint initializer in `app/app.vue` and the persisted, system-aware state management in `app/composables/useColorMode.ts`.
+- [x] T002 Register the pre-paint initializer through `useColorModeHead` from `app/app.vue` and add persisted, system-aware state management in `app/composables/useColorMode.ts`.
 - [x] T003 Add an accessible sun/moon control to `app/components/Navigation/index.vue` and bundle its icons through `nuxt.config.ts`.
 - [x] T004 Replace hard-coded theme colors across the layout, hero, logo collection, social links, and blog detail page.
 

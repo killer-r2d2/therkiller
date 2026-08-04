@@ -1,11 +1,9 @@
-export type ColorMode = 'light' | 'dark';
-
-const COLOR_MODE_STORAGE_KEY = 'therkiller-color-mode';
-const DARK_MODE_MEDIA_QUERY = '(prefers-color-scheme: dark)';
-
-const isColorMode = (value: string | null): value is ColorMode => {
-	return value === 'light' || value === 'dark';
-};
+import {
+	COLOR_MODE_STORAGE_KEY,
+	DARK_MODE_MEDIA_QUERY,
+	isColorMode,
+	type ColorMode,
+} from '~/utils/colorMode';
 
 const getColorModeMediaQuery = (): MediaQueryList | undefined => {
 	try {
