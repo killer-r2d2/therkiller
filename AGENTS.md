@@ -77,13 +77,17 @@ Spec rules:
 - Update the spec when accepted scope changes during implementation.
 - Keep `not in scope` explicit and enforce it during review.
 - Do not treat stale specs as higher authority than current product, design, Jira, code, or user instructions.
+- After a change is merged and its final verification is complete, move its entire directory from `.agent-specs/changes/` to `.agent-specs/archive/`.
+- Treat archived specs as historical context only. They do not define the accepted scope of new work.
+- Keep `.agent-specs/changes/.gitkeep` so the active-change directory remains available when no change spec is in progress.
 
 ## Shared Agent Workflows
 
 This repository uses shared workflow bodies with tool-specific adapters:
 
 - Shared workflow body: `.agent-workflows/`
-- Change specs: `.agent-specs/`
+- Active change specs: `.agent-specs/changes/`
+- Archived change specs: `.agent-specs/archive/`
 - Codex skills: `.agents/skills/`
 - Claude skills: `.claude/skills/`
 - Cursor rules: `.cursor/rules/`

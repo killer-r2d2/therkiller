@@ -88,7 +88,7 @@ Implementation result on 2026-08-04: a fresh npm 10.9.8 `npm ci` installed 1,039
 - `app/pages/blog/[...slug].vue`: verification target for the existing Lucide icon, not an expected edit.
 - `Dockerfile`: Node 22 Alpine build baseline with npm 10.9.8 pinned before the clean install.
 - `.dockerignore`: excludes local dependencies, generated output, logs, and environment files from the deployment build context.
-- `.agent-specs/changes/dependency-maintenance/`: durable decisions and implementation progress.
+- `.agent-specs/archive/dependency-maintenance/`: durable decisions and implementation history.
 
 ## Data And Contracts
 
