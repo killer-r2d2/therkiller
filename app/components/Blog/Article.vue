@@ -20,11 +20,11 @@ const formatDate = (date: string) => {
   <article>
     <NuxtLink :to="blogPost.path" class="no-underline flex flex-col max-w-max">
       <div>
-        <time v-if="blogPost.dates?.published" class="text-sm">{{
+        <time v-if="blogPost.dates?.published" class="text-sm text-muted">{{
           formatDate(blogPost.dates.published)
         }}</time>
         <h1>{{ blogPost.title }}</h1>
-        <p v-if="blogPost.tags" class="text-xs">{{ blogPost.tags }}</p>
+        <p v-if="blogPost.tags" class="text-xs text-muted">{{ blogPost.tags }}</p>
       </div>
     </NuxtLink>
   </article>

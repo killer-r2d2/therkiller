@@ -20,8 +20,8 @@ const { data: blogPost } = await useAsyncData(`blogPost:${blogContentPath}`, () 
 		<BaseSection>
 			<BaseContainer>
 				<!-- create a back button -->
-				<NuxtLink to="/" class="mb-8 max-w-max text-primary-400 inline-flex items-center gap-2">
-					<Icon name="lucide:arrow-left" size="26" style="color: text-primary-400" />
+				<NuxtLink to="/" class="mb-8 max-w-max text-accent hover:text-accent-hover inline-flex items-center gap-2 transition-colors duration-200 motion-reduce:transition-none">
+					<Icon name="lucide:arrow-left" size="26" />
 					back
 				</NuxtLink>
 
@@ -29,9 +29,9 @@ const { data: blogPost } = await useAsyncData(`blogPost:${blogContentPath}`, () 
 				<ContentRenderer
 					v-if="blogPost"
 					:value="blogPost"
-					class="prose text-white prose-headings:text-white prose-p:font-serif prose-a:text-white prose-strong:font-serif prose-strong:text-primary-400 prose-li:font-serif"
+					class="prose-themed prose prose-p:font-serif prose-strong:font-serif prose-strong:text-accent prose-li:font-serif"
 				/>
-				<p v-else class="text-white">
+				<p v-else class="text-muted">
 					Post not found.
 				</p>
 			</BaseContainer>

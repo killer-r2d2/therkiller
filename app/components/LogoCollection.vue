@@ -12,7 +12,7 @@
 					class="scale-100 transform transition-all duration-300 hover:scale-110"
 				>
 					<div
-						class="flex h-full items-center justify-center rounded-lg border-2 border-white p-4"
+						class="flex h-full items-center justify-center rounded-lg border-2 border-logo-border bg-logo-surface p-4 text-logo-foreground transition-colors duration-200 motion-reduce:transition-none"
 					>
 						<LogoNuxt class="max-w-24" />
 					</div>
@@ -25,7 +25,7 @@
 					class="scale-100 transform transition-all duration-300 hover:scale-110"
 				>
 					<div
-						class="flex h-full items-center justify-center rounded-lg border-2 border-white p-4"
+						class="flex h-full items-center justify-center rounded-lg border-2 border-logo-border bg-logo-surface p-4 text-logo-foreground transition-colors duration-200 motion-reduce:transition-none"
 					>
 						<LogoTailwind class="max-w-24" />
 					</div>
@@ -38,7 +38,7 @@
 					class="scale-100 transform transition-all duration-300 hover:scale-110"
 				>
 					<div
-						class="flex h-full items-center justify-center rounded-lg border-2 border-white p-4"
+						class="flex h-full items-center justify-center rounded-lg border-2 border-logo-border bg-logo-surface p-4 text-logo-foreground transition-colors duration-200 motion-reduce:transition-none"
 					>
 						<LogoKirby class="max-w-24" />
 					</div>
@@ -51,7 +51,7 @@
 					class="scale-100 transform transition-all duration-300 hover:scale-110"
 				>
 					<div
-						class="flex h-full items-center justify-center rounded-lg border-2 border-white p-4"
+						class="flex h-full items-center justify-center rounded-lg border-2 border-logo-border bg-logo-surface p-4 text-logo-foreground transition-colors duration-200 motion-reduce:transition-none"
 					>
 						<LogoStrapi class="max-w-24" />
 					</div>
@@ -64,7 +64,7 @@
 					class="scale-100 transform no-underline transition-all duration-300 hover:scale-110"
 				>
 					<div
-						class="flex h-full items-center justify-center rounded-lg border-2 border-white p-4"
+						class="flex h-full items-center justify-center rounded-lg border-2 border-logo-border bg-logo-surface p-4 text-logo-foreground transition-colors duration-200 motion-reduce:transition-none"
 					>
 						<LogoCoolify class="max-w-24" />
 					</div>
@@ -74,7 +74,7 @@
 					class="scale-100 transform transition-all duration-300 hover:scale-110"
 				>
 					<div
-						class="flex h-full items-center justify-center rounded-lg border-2 border-white p-4"
+						class="flex h-full items-center justify-center rounded-lg border-2 border-logo-border bg-logo-surface p-4 text-logo-foreground transition-colors duration-200 motion-reduce:transition-none"
 					>
 						<LogoHTMLCSSJACASCRIPT class="max-w-24" />
 					</div>
