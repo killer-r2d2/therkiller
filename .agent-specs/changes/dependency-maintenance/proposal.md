@@ -50,8 +50,10 @@ The current dependency graph also contains overlapping Vue Router versions throu
 
 ## Open Questions
 
-- Should the unused `lint-staged` package and configuration be removed, or should staged-file checks be wired into the Husky pre-commit hook? The default planning assumption is removal because the existing hook already runs the full lint command.
-- Should all major upgrades ship under one initiative as separate pull requests, or should each major become a later change spec? The default planning assumption is one initiative with independently reviewable implementation branches.
+None. The accepted decisions are:
+
+- Remove the unused `lint-staged` package and configuration because the existing Husky hook already runs the full lint command.
+- Manage approved major upgrades under this initiative as independently reviewable implementation branches and pull requests.
 
 ## Risks
 

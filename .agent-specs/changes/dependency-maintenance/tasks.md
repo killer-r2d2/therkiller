@@ -4,23 +4,23 @@ The implementation is split into four update pull requests followed by a consoli
 
 ## Planning Decisions And Baseline
 
-- [ ] T001 Confirm the proposal defaults before implementation: remove unused `lint-staged`, manage all approved majors under this initiative as separate pull requests, defer `better-sqlite3` 13 and TypeScript 7.
-- [ ] T002 On the first implementation branch, use the official Nuxt MCP and `npm outdated` to refresh the target-version matrix without crossing any additional major boundary.
-- [ ] T003 Capture the pre-update baseline in implementation notes: `node --version`, `npm --version`, `npm ls --depth=0`, `npm ls vue vue-router nuxt @nuxt/content better-sqlite3`, `npm audit --json`, `npm run lint`, and `npm run generate`.
-- [ ] T004 Record the known baseline separately: the self-closing image lint warning in `app/components/logo/Kirby.vue`, repeated `lucide:arrow-left` generation warnings, sourcemap warnings, generated route count, and any existing audit findings.
+- [x] T001 Confirm the proposal defaults before implementation: remove unused `lint-staged`, manage all approved majors under this initiative as separate pull requests, defer `better-sqlite3` 13 and TypeScript 7.
+- [x] T002 On the first implementation branch, use the official Nuxt MCP and `npm outdated` to refresh the target-version matrix without crossing any additional major boundary.
+- [x] T003 Capture the pre-update baseline in implementation notes: `node --version`, `npm --version`, `npm ls --depth=0`, `npm ls vue vue-router nuxt @nuxt/content better-sqlite3`, `npm audit --json`, `npm run lint`, and `npm run generate`.
+- [x] T004 Record the known baseline separately: the self-closing image lint warning in `app/components/logo/Kirby.vue`, repeated `lucide:arrow-left` generation warnings, sourcemap warnings, generated route count, and any existing audit findings.
 
 ## Pull Request 1: Maintenance And Nuxt Core
 
-- [ ] T005 Create `codex/dependencies-core-maintenance` from the latest `main`; depends on T001-T004.
-- [ ] T006 Review the Nuxt 4.5 release and upgrade guidance through the Nuxt MCP, focusing on Vite 8, Unhead 3, `future.compatibilityVersion: 5`, and the recommended deduplication flow.
-- [ ] T007 Upgrade `nuxt` to the current approved 4.5.x patch and regenerate the lockfile through the official deduplicating Nuxt/npm upgrade path.
-- [ ] T008 Align direct `vue` and `vue-router` ranges with the versions selected by Nuxt 4.5.x; do not retain direct Vue Router 4.
-- [ ] T009 Update the approved compatible packages in `package.json`: `@nuxt/content`, `@tailwindcss/vite`, `@iconify-json/lucide`, `autoprefixer`, `postcss`, `prettier`, and `tailwindcss`.
-- [ ] T010 Review `package.json` and `package-lock.json` for unexpected majors, new lifecycle scripts, loss of Alpine optional packages, or unrelated churn.
-- [ ] T011 Run `npm ci`, then `npm ls vue vue-router nuxt`; verify one intended Vue Router major is installed and no invalid peer dependency is reported.
-- [ ] T012 Run `npm run lint` and `npm run generate`; compare exit status, route count, and warnings against T003-T004.
-- [ ] T013 Smoke-check home, blog index, and one blog detail route from the generated output to catch routing or rendering regressions.
-- [ ] T014 Run the `therkiller-spec-verify` and `therkiller-ship` workflows for this batch, preparing a pull request that documents exact versions, baseline differences, audit changes, and remaining deferrals.
+- [x] T005 Create `codex/dependencies-core-maintenance` from the latest `main`; depends on T001-T004.
+- [x] T006 Review the Nuxt 4.5 release and upgrade guidance through the Nuxt MCP, focusing on Vite 8, Unhead 3, `future.compatibilityVersion: 5`, and the recommended deduplication flow.
+- [x] T007 Upgrade `nuxt` to the current approved 4.5.x patch and regenerate the lockfile through the official deduplicating Nuxt/npm upgrade path.
+- [x] T008 Align direct `vue` and `vue-router` ranges with the versions selected by Nuxt 4.5.x; do not retain direct Vue Router 4.
+- [x] T009 Update the approved compatible packages in `package.json`: `@nuxt/content`, `@tailwindcss/vite`, `@iconify-json/lucide`, `autoprefixer`, `postcss`, `prettier`, and `tailwindcss`.
+- [x] T010 Pin `nostics` 1.2.x for Nuxt 4.5 prerender compatibility, then review `package.json` and `package-lock.json` for unexpected majors, new lifecycle scripts, loss of Alpine optional packages, or unrelated churn.
+- [x] T011 Run `npm ci`, then `npm ls vue vue-router nuxt nostics`; verify one intended Vue Router major is installed, Nuxt resolves `nostics` 1.2.x, and no invalid peer dependency is reported.
+- [x] T012 Run `npm run lint` and `npm run generate`; compare exit status, route count, and warnings against T003-T004.
+- [x] T013 Smoke-check the home-page blog listing and one blog detail route from the generated output to catch routing or rendering regressions.
+- [x] T014 Run the `therkiller-spec-verify` and `therkiller-ship` workflows for this batch, preparing a pull request that documents exact versions, baseline differences, audit changes, and remaining deferrals.
 
 ## Pull Request 2: Nuxt Image 2
 
