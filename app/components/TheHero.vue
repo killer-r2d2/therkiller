@@ -17,7 +17,7 @@ const { data: homePage } = await useAsyncData('home', () =>
 					<ContentRenderer
 						v-if="homePage"
 						:value="homePage"
-						class="a:underline text-white"
+						class="a:underline text-foreground"
 					/>
 				</div>
 				<div class="mb-8 flex justify-center">
