@@ -26,6 +26,12 @@ export default defineNuxtConfig({
 	image: {
 		format: ['webp'],
 	},
+	icon: {
+		clientBundle: {
+			icons: ['lucide:arrow-left'],
+			scan: false,
+		},
+	},
 
 	vite: {
 		plugins: [tailwindcss()],

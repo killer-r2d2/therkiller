@@ -31,7 +31,7 @@
 	},
 	"devDependencies": {
 		"@iconify-json/lucide": "^1.2.121",
-		"@nuxt/icon": "^1.13.0",
+		"@nuxt/icon": "^2.4.1",
 		"@tailwindcss/typography": "^0.5.12",
 		"autoprefixer": "^10.5.4",
 		"husky": "^9.1.7",

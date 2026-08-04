@@ -33,12 +33,12 @@ The implementation is split into four update pull requests followed by a consoli
 
 ## Pull Request 3: Nuxt Icon 2
 
-- [ ] T021 After Pull Request 2 is merged, create `codex/nuxt-icon-2` from the latest `main`.
-- [ ] T022 Use the Nuxt MCP to review Nuxt Icon 2 migration and collection-loading guidance for static generation.
-- [ ] T023 Upgrade `@nuxt/icon` to the approved 2.x release and update `@iconify-json/lucide` only if the merged maintenance version is not the current compatible release.
-- [ ] T024 Run `npm ci`, `npm run lint`, and `npm run generate`; compare icon-related warnings to the baseline.
-- [ ] T025 Inspect a generated blog detail page and verify that `lucide:arrow-left` is rendered or its required asset/data is present. If the warning remains, diagnose and document it without expanding into unrelated icon refactors.
-- [ ] T026 Review the manifest and lockfile diff, then run `therkiller-spec-verify` and `therkiller-ship` for the isolated module-major pull request.
+- [x] T021 After Pull Request 2 is merged, create `codex/nuxt-icon-2` from the latest `main`.
+- [x] T022 Use the Nuxt MCP to review Nuxt Icon 2 migration and collection-loading guidance for static generation.
+- [x] T023 Upgrade `@nuxt/icon` to the approved 2.x release and update `@iconify-json/lucide` only if the merged maintenance version is not the current compatible release.
+- [x] T024 Run `npm ci`, `npm run lint`, and `npm run generate`; compare icon-related warnings to the baseline.
+- [x] T025 Inspect a generated blog detail page and verify that `lucide:arrow-left` is rendered or its required asset/data is present. If the warning remains, diagnose and document it without expanding into unrelated icon refactors.
+- [x] T026 Review the manifest and lockfile diff, then run `therkiller-spec-verify` and `therkiller-ship` for the isolated module-major pull request.
 
 ## Pull Request 4: Formatting Tooling And Cleanup
 

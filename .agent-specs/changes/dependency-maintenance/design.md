@@ -56,6 +56,8 @@ Implementation result on 2026-08-04: the source scan confirmed that there are no
 2. Verify the `lucide:arrow-left` usage on the blog detail page during static generation and in the generated output.
 3. Treat the current repeated icon-load warning as a recorded baseline issue: the batch must either resolve it or document why it remains, and must not introduce missing icons on rendered pages.
 
+Implementation result on 2026-08-04: Nuxt Icon 2.4.1 retains the existing `<Icon name="lucide:arrow-left">` API, and the installed Lucide collection 1.2.121 is already current. Because the generated site has no runtime icon endpoint, the single known icon is explicitly included through `icon.clientBundle`. The generated client bundle contains the Lucide arrow SVG data, adds only 0.22 KB uncompressed, and eliminates the repeated icon-load warnings during prerendering.
+
 ### Batch 4: Formatting Tooling And Hook Cleanup
 
 1. Upgrade `prettier-plugin-tailwindcss` to 0.8.x.
