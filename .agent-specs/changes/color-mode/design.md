@@ -5,15 +5,18 @@
 Implement color mode with existing Nuxt and browser capabilities rather than adding a module.
 
 1. Define semantic CSS custom properties for background, surface, foreground, muted foreground, border, and accent colors. Light values are the default CSS fallback, dark values apply through `data-theme="dark"`, and a media-query fallback supports users without JavaScript.
-2. Add a static initialization script through Nuxt `useHead`. It reads the trusted, fixed local-storage key, falls back to `matchMedia('(prefers-color-scheme: dark)')`, and sets `data-theme` plus `color-scheme` on the root element before the body is painted.
-3. Add an auto-imported `useColorMode` composable to own reactive state, synchronize it with the root element, persist explicit changes, and follow operating-system changes only until the visitor makes an explicit selection.
-4. Add an icon button to the existing navigation. It displays the action available to the visitor, includes a matching accessible label, and uses the installed Lucide icon set.
-5. Replace hard-coded black, white, border, prose, and icon colors with the semantic tokens. Use a deep petrol accent in light mode and the existing brighter turquoise in dark mode.
+2. Add an auto-imported `useColorModeHead` composable, invoked from `app.vue`, that registers a static initialization script through Nuxt `useHead`. It reads the trusted, fixed local-storage key, falls back to `matchMedia('(prefers-color-scheme: dark)')`, and sets `data-theme` plus `color-scheme` on the root element before the body is painted.
+3. Centralize the supported color-mode type, storage key, media query, and value validation in `app/utils/colorMode.ts`, then use those contracts from both the head initializer and the runtime state management.
+4. Add an auto-imported `useColorMode` composable to own reactive state, synchronize it with the root element, persist explicit changes, and follow operating-system changes only until the visitor makes an explicit selection.
+5. Add an icon button to the existing navigation. It displays the action available to the visitor, includes a matching accessible label, and uses the installed Lucide icon set.
+6. Replace hard-coded black, white, border, prose, and icon colors with the semantic tokens. Use a deep petrol accent in light mode and the existing brighter turquoise in dark mode.
 
 ## Impacted Areas
 
-- `app/app.vue`: register the pre-paint color-mode initializer.
+- `app/app.vue`: invoke the global color-mode head setup.
+- `app/composables/useColorModeHead.ts`: register the pre-paint color-mode initializer and color-scheme metadata.
 - `app/composables/useColorMode.ts`: reactive theme state, system preference, persistence, and toggling.
+- `app/utils/colorMode.ts`: shared color-mode type, storage key, media query, and value validation.
 - `app/components/Navigation/index.vue`: accessible toggle control.
 - `app/assets/css/main.css`: palettes, semantic tokens, theme transitions, focus treatment, and themed prose.
 - `app/layouts/default.vue`: semantic application background and foreground.
@@ -41,7 +44,7 @@ Implement color mode with existing Nuxt and browser capabilities rather than add
 
 ## Security And Privacy
 
-The feature stores only a non-sensitive `light` or `dark` string in local storage. The initialization script is static repository code and does not interpolate user or content data.
+The feature stores only a non-sensitive `light` or `dark` string in local storage. The initialization script is static repository code and interpolates only trusted shared constants, never user or content data.
 
 ## Verification Strategy
 
