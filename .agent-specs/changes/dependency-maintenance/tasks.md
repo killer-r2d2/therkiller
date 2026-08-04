@@ -53,12 +53,12 @@ The implementation is split into four update pull requests followed by a consoli
 
 ## Consolidated Verification And Documentation
 
-- [ ] T035 After all accepted batches are merged, start from the latest `main` and run a clean `npm ci` using the committed lockfile.
-- [ ] T036 Run `scripts/verify.sh`; confirm lint and static generation introduce no new failures or warnings relative to T004.
-- [ ] T037 Run `docker build --target build -t therkiller-dependency-check .` to verify Node 22 Alpine installation, native `better-sqlite3`, and static generation on the production build platform.
-- [ ] T038 Run `npm ls --depth=0`, the focused Nuxt/Vue/Router/Content tree, and `npm audit --json`; compare them with T003 and confirm every direct dependency has an update or deferral decision.
-- [ ] T039 Update `proposal.md`, `design.md`, and this task list if accepted scope or version constraints changed during implementation; mark completed tasks accurately.
-- [ ] T040 Prepare final implementation notes listing merged batches, exact versions, fixed vulnerabilities, remaining audit findings, known warnings, and deferred upgrades (`better-sqlite3` 13 and TypeScript 7).
+- [x] T035 After all accepted batches are merged, start from the latest `main` and run a clean `npm ci` using the committed lockfile.
+- [x] T036 Run `scripts/verify.sh`; confirm lint and static generation introduce no new failures or warnings relative to T004.
+- [x] T037 Run `docker build --target build -t therkiller-dependency-check .` to verify Node 22 Alpine installation, native `better-sqlite3`, and static generation on the production build platform.
+- [x] T038 Run `npm ls --depth=0`, the focused Nuxt/Vue/Router/Content tree, and `npm audit --json`; compare them with T003 and confirm every direct dependency has an update or deferral decision.
+- [x] T039 Update `proposal.md`, `design.md`, and this task list if accepted scope or version constraints changed during implementation; mark completed tasks accurately.
+- [x] T040 Prepare final implementation notes listing merged batches, exact versions, fixed vulnerabilities, remaining audit findings, known warnings, and deferred upgrades (`better-sqlite3` 13 and TypeScript 7).
 
 ## Optional Follow-Ups Outside This Change
 

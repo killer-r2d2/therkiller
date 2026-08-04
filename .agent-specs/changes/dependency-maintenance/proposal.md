@@ -48,6 +48,12 @@ The current dependency graph also contains overlapping Vue Router versions throu
 - Security findings are reduced where compatible fixes exist; remaining findings are explicitly recorded with their constraint or follow-up action.
 - Major upgrades can be reviewed and, if necessary, reverted independently from maintenance updates.
 
+## Outcome
+
+Completed on 2026-08-04 through isolated Nuxt core, Nuxt Image, Nuxt Icon, deployment-lockfile, and formatting-tooling pull requests. All success criteria are satisfied: clean npm 10.9.8 and Node 22 Alpine installs succeed, Nuxt/Vue/Vue Router resolve on one compatible graph, static generation produces 25 routes, and the final audit reports zero vulnerabilities. The final registry comparison lists only the accepted `better-sqlite3` 13 and TypeScript 7 deferrals.
+
+See `implementation.md` for the merged batches, exact resolved versions, verification evidence, known warnings, and follow-up boundaries.
+
 ## Open Questions
 
 None. The accepted decisions are:

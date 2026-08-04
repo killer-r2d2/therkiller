@@ -75,16 +75,19 @@ Implementation result on 2026-08-04: `prettier-plugin-tailwindcss` 0.8.1 is the 
 4. Compare `npm audit` and dependency-tree output with the baseline.
 5. Record all intentional deferrals and remaining warnings in the final pull-request handoff.
 
+Implementation result on 2026-08-04: a fresh npm 10.9.8 `npm ci` installed 1,039 packages and reported zero vulnerabilities. The focused dependency tree contains Nuxt 4.5.1, Vue 3.5.40, Vue Router 5.2.0, Nuxt Content 3.15.2, Nuxt Image 2.1.0, Nuxt Icon 2.4.1, `nostics` 1.2.0, and `better-sqlite3` 12.11.1 without an incompatible duplicate runtime major. `scripts/verify.sh` passed with the known `Kirby.vue` lint warning and generated 25 routes. A no-cache Node 22 Alpine build independently installed the lockfile with npm 10.9.8, reported zero vulnerabilities, and generated the same 25 routes. The final `npm outdated` result contains only the accepted `better-sqlite3` 13.0.2 and TypeScript 7.0.2 deferrals.
+
 ## Impacted Areas
 
-- `package.json`: version ranges, the Nuxt-compatible `nostics` pin, removal of `lint-staged`, and removal of its unused configuration.
+- `package.json`: version ranges, npm 10.9.8 package-manager declaration, the Nuxt-compatible `nostics` pin, removal of `lint-staged`, and removal of its unused configuration.
 - `package-lock.json`: npm-managed resolution changes for every batch.
 - `nuxt.config.ts`: only if Nuxt Image 2 or Nuxt Icon 2 requires a documented configuration migration.
 - `.prettierrc`: Tailwind 4 stylesheet entry for the upgraded class-sorting plugin.
 - `.husky/pre-commit`: expected to remain `npm run lint`; change only if the accepted lint-staged decision changes.
 - `app/components/Navigation/index.vue`: isolated mechanical class-order update required by the Tailwind 4-aware formatter.
 - `app/pages/blog/[...slug].vue`: verification target for the existing Lucide icon, not an expected edit.
-- `Dockerfile`: verification target for Node 22 Alpine compatibility, not an expected edit.
+- `Dockerfile`: Node 22 Alpine build baseline with npm 10.9.8 pinned before the clean install.
+- `.dockerignore`: excludes local dependencies, generated output, logs, and environment files from the deployment build context.
 - `.agent-specs/changes/dependency-maintenance/`: durable decisions and implementation progress.
 
 ## Data And Contracts
