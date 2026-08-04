@@ -15,4 +15,4 @@
 
 ## Delivery
 
-- [ ] T008 Commit only color-mode files, push the feature branch, and prepare the manual pull-request handoff through the ship workflow.
+- [x] T008 Commit only color-mode files, push the feature branch, and prepare the manual pull-request handoff through the ship workflow.
