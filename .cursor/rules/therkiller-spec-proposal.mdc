@@ -1,0 +1,11 @@
+---
+description: Use before large, ambiguous, risky, user-facing, or multi-step work starts.
+globs:
+alwaysApply: false
+---
+
+# therkiller Spec Proposal
+
+Follow `.agent-workflows/spec-proposal.md`.
+
+Use `AGENTS.md` as the project baseline. Create or update `.agent-specs/changes/<change-slug>/proposal.md`.

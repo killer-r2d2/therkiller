@@ -1,0 +1,3 @@
+display_name: therkiller Ship
+short_description: Verify, push, and prepare a manual PR handoff
+default_prompt: Use $therkiller-ship to verify, commit, push, and prepare copy-ready pull-request metadata for manual creation.

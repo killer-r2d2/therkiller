@@ -1,0 +1,11 @@
+---
+description: Use before refactoring, modernization, dependency replacement, or large cleanup.
+globs:
+alwaysApply: false
+---
+
+# therkiller Refactor Readiness
+
+Follow `.agent-workflows/refactor-readiness.md`.
+
+Use `AGENTS.md` as the project baseline. Return `Ready`, `Ready with constraints`, or `Not ready`.

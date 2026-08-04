@@ -1,0 +1,11 @@
+---
+description: Use after implementation work and before creating or preparing a pull request.
+globs:
+alwaysApply: false
+---
+
+# therkiller PR Readiness
+
+Follow `.agent-workflows/pr-readiness.md`.
+
+Use `AGENTS.md` as the project baseline. Return `Ready`, `Ready with notes`, or `Not ready` with verification notes.

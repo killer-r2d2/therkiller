@@ -1,0 +1,3 @@
+display_name: therkiller Spec Verify
+short_description: Compare implementation against the change spec
+default_prompt: Use $therkiller-spec-verify to compare the implementation against the change spec.

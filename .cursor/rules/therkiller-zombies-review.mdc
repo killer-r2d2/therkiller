@@ -1,0 +1,11 @@
+---
+description: Use before review or PR readiness when behavior, UI, CMS, integration, parsing, forms, or state handling changed.
+globs:
+alwaysApply: false
+---
+
+# therkiller ZOMBIES Review
+
+Follow `.agent-workflows/zombies-review.md`.
+
+Check Zero, One, Many, Boundaries, Interfaces, Exceptions, and Simple. Report only useful findings and verification gaps.

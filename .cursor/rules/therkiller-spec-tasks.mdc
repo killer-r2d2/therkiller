@@ -1,0 +1,11 @@
+---
+description: Use after proposal and design exist and before implementation starts.
+globs:
+alwaysApply: false
+---
+
+# therkiller Spec Tasks
+
+Follow `.agent-workflows/spec-tasks.md`.
+
+Use `AGENTS.md` as the project baseline. Create or update `.agent-specs/changes/<change-slug>/tasks.md`.

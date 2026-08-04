@@ -1,0 +1,3 @@
+display_name: therkiller Refactor Readiness
+short_description: Decide whether a refactor is safe to start
+default_prompt: Use $therkiller-refactor-readiness to decide whether the proposed refactor is scoped and safe to start.

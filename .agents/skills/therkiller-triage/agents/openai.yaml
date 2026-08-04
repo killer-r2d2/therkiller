@@ -1,0 +1,3 @@
+display_name: therkiller Triage
+short_description: Prioritize branch review risks
+default_prompt: Use $therkiller-triage to classify the current branch review risks.

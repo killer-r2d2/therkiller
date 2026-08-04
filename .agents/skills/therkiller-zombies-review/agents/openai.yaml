@@ -1,0 +1,3 @@
+display_name: therkiller ZOMBIES Review
+short_description: Find edge cases before review
+default_prompt: Use $therkiller-zombies-review to check this change for ZOMBIES edge cases.
