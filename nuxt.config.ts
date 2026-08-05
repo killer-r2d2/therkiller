@@ -31,8 +31,10 @@ export default defineNuxtConfig({
 			icons: [
 				'lucide:arrow-left',
 				'lucide:arrow-right',
+				'lucide:menu',
 				'lucide:moon',
 				'lucide:sun',
+				'lucide:x',
 			],
 			scan: false,
 		},
