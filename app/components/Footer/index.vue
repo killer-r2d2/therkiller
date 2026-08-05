@@ -8,12 +8,27 @@
 				>
 					therkiller.dev
 				</NuxtLink>
-				<nav aria-label="Footer navigation" class="mb-6 flex gap-x-6">
+				<nav
+					aria-label="Footer navigation"
+					class="mb-6 flex flex-wrap justify-center gap-x-6 gap-y-3"
+				>
 					<NuxtLink
 						to="/blog"
 						class="text-base text-foreground transition-colors duration-200 hover:text-accent motion-reduce:transition-none lg:text-base"
 					>
 						Blog
+					</NuxtLink>
+					<NuxtLink
+						to="/colophon"
+						class="text-base text-foreground transition-colors duration-200 hover:text-accent motion-reduce:transition-none lg:text-base"
+					>
+						Colophon
+					</NuxtLink>
+					<NuxtLink
+						to="/privacy"
+						class="text-base text-foreground transition-colors duration-200 hover:text-accent motion-reduce:transition-none lg:text-base"
+					>
+						Privacy
 					</NuxtLink>
 				</nav>
 				<div class="flex flex-row gap-x-4">
