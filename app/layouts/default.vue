@@ -4,7 +4,7 @@
 	>
 		<Navigation />
 		<div class="grow">
-			<NuxtPage />
+			<slot />
 		</div>
 		<Footer />
 	</div>

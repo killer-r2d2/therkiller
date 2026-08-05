@@ -1,8 +1,8 @@
 <script setup lang="ts">
-	import type { BlogPost } from '~/types/blogPost';
+	import type { Collections } from '@nuxt/content';
 
 	const props = defineProps<{
-		blogPost: BlogPost;
+		blogPost: Collections['content'];
 		headingLevel?: 'h2' | 'h3';
 	}>();
 
