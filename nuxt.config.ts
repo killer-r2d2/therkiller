@@ -28,7 +28,12 @@ export default defineNuxtConfig({
 	},
 	icon: {
 		clientBundle: {
-			icons: ['lucide:arrow-left', 'lucide:moon', 'lucide:sun'],
+			icons: [
+				'lucide:arrow-left',
+				'lucide:arrow-right',
+				'lucide:moon',
+				'lucide:sun',
+			],
 			scan: false,
 		},
 	},
