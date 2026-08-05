@@ -1,5 +1,17 @@
 <script setup lang="ts">
 const route = useRoute();
+const router = useRouter();
+
+const goBack = () => {
+	const previousLocation = window.history.state?.back;
+
+	if (typeof previousLocation === 'string') {
+		router.back();
+		return;
+	}
+
+	void router.push('/blog');
+};
 
 const slugParam = route.params.slug;
 const slugSegments = Array.isArray(slugParam)
@@ -20,10 +32,14 @@ const { data: blogPost } = await useAsyncData(`blogPost:${blogContentPath}`, () 
 		<BaseSection>
 			<BaseContainer>
 				<!-- create a back button -->
-				<NuxtLink to="/" class="mb-8 max-w-max text-accent hover:text-accent-hover inline-flex items-center gap-2 transition-colors duration-200 motion-reduce:transition-none">
+				<button
+					type="button"
+					class="mb-8 inline-flex max-w-max cursor-pointer items-center gap-2 text-accent underline transition-colors duration-200 hover:text-accent-hover hover:opacity-80 motion-reduce:transition-none"
+					@click="goBack"
+				>
 					<Icon name="lucide:arrow-left" size="26" />
-					back
-				</NuxtLink>
+					Back
+				</button>
 
 				<!-- Display the content only if the blogPost is available -->
 				<ContentRenderer
