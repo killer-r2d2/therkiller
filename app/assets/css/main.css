@@ -23,6 +23,7 @@
   --color-border: var(--theme-border);
   --color-accent: var(--theme-accent);
   --color-accent-hover: var(--theme-accent-hover);
+  --color-accent-contrast: var(--theme-accent-contrast);
   --color-logo-surface: var(--theme-logo-surface);
   --color-logo-foreground: var(--theme-logo-foreground);
   --color-logo-border: var(--theme-logo-border);
@@ -38,6 +39,7 @@
   --theme-border: #d8d4cc;
   --theme-accent: #0b6570;
   --theme-accent-hover: #084c54;
+  --theme-accent-contrast: #ffffff;
   --theme-logo-surface: transparent;
   --theme-logo-foreground: #17181c;
   --theme-logo-border: #17181c;
@@ -56,6 +58,7 @@
   --theme-border: #2c3340;
   --theme-accent: #54bdc8;
   --theme-accent-hover: #80d3dc;
+  --theme-accent-contrast: #0b0d12;
   --theme-logo-surface: #151923;
   --theme-logo-foreground: #f3f5f7;
   --theme-logo-border: #343d4b;
@@ -75,6 +78,7 @@
     --theme-border: #2c3340;
     --theme-accent: #54bdc8;
     --theme-accent-hover: #80d3dc;
+    --theme-accent-contrast: #0b0d12;
     --theme-logo-surface: #151923;
     --theme-logo-foreground: #f3f5f7;
     --theme-logo-border: #343d4b;
@@ -110,6 +114,54 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('/fonts/Lato-Light.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/Lato-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/Lato-Bold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('/fonts/RobotoSlab-Light.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/RobotoSlab-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/RobotoSlab-Bold.ttf') format('truetype');
+  }
+
   *,
   ::after,
   ::before,
@@ -118,7 +170,6 @@
     border-color: var(--color-border, currentcolor);
   }
 }
-
 
 @layer utilities {
 	.logo-wordmark-overlay {
@@ -130,18 +181,6 @@
 		filter: brightness(0);
 		opacity: var(--theme-logo-wordmark-overlay-opacity);
 	}
-
-  @font-face {
-    font-family: 'Lato';
-    font-weight: 700;
-    src: url('/fonts/Lato-Bold.ttf') format('truetype');
-  }
-
-  @font-face {
-    font-family: 'RobotoSlab';
-    font-weight: 400;
-    src: url('/fonts/Lato-Regular.ttf') format('truetype');
-  }
 }
 
 @layer base {
