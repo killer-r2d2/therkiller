@@ -1,29 +1,26 @@
-import type { BlogPost } from '~/types/blogPost';
+const getPublishedTime = (publishedDate?: string) =>
+	new Date(publishedDate ?? 0).getTime();
 
 export const useBlog = () => {
-	const getAllPosts = async () => {
-		const { data } = await useAsyncData('blogPosts', () =>
-			queryCollection('content').where('path', 'LIKE', '/blog/%').all()
-		);
+	const getAllPosts = () =>
+		useAsyncData('blogPosts', async () => {
+			const posts = await queryCollection('content')
+				.where('path', 'LIKE', '/blog/%')
+				.all();
 
-		const unsortedPosts = (data.value ?? []) as unknown as BlogPost[];
-		return unsortedPosts.sort((firstPost, secondPost) => {
-			const firstPublishedTime = new Date(
-				firstPost.dates?.published ?? 0
-			).getTime();
-			const secondPublishedTime = new Date(
-				secondPost.dates?.published ?? 0
-			).getTime();
-			return secondPublishedTime - firstPublishedTime;
+			return [...posts].sort(
+				(firstPost, secondPost) =>
+					getPublishedTime(secondPost.dates?.published) -
+					getPublishedTime(firstPost.dates?.published)
+			);
 		});
-	};
 
-	const getPostBySlug = async (slug: string) => {
+	const getPostBySlug = (slug: string) => {
 		const blogContentPath = `/blog/${slug}`;
-		const { data } = await useAsyncData(`blogPost:${blogContentPath}`, () =>
+
+		return useAsyncData(`blogPost:${blogContentPath}`, () =>
 			queryCollection('content').path(blogContentPath).first()
 		);
-		return data.value as unknown as BlogPost | null;
 	};
 
 	return {

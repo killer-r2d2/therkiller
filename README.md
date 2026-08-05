@@ -1,75 +1,58 @@
-# Nuxt 3 Minimal Starter
+# therkiller.dev
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Personal portfolio and blog built as a statically generated Nuxt application.
+
+## Stack
+
+- Nuxt 4 and Vue 3
+- Nuxt Content for Markdown pages and blog posts
+- Tailwind CSS 4
+- Nuxt Icon and Lucide icons
+- Nginx for serving the generated site in production
+
+## Requirements
+
+- Node.js 22
+- npm 10.9.8
 
 ## Setup
 
-Make sure to install the dependencies:
+Install the locked dependencies:
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+npm ci
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+Start the development server at `http://localhost:3000`:
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
+
+## Verification
+
+Run the complete project verification before preparing a pull request:
+
+```bash
+./scripts/verify.sh
+```
+
+The script runs ESLint and generates the static production site. No automated test suite is configured yet.
 
 ## Production
 
-Build the application for production:
+Generate the static site in `.output/public`:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+npm run generate
 ```
 
-Locally preview production build:
+The included `Dockerfile` builds the application and serves the generated files with Nginx.
 
-```bash
-# npm
-npm run preview
+## Project structure
 
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- `app/`: pages, layouts, components, composables, utilities, and styles
+- `content/`: Markdown content managed by Nuxt Content
+- `public/`: static images, fonts, icons, and logos
+- `scripts/verify.sh`: required lint and static-generation gate
+- `.agent-specs/`: active and archived change specifications

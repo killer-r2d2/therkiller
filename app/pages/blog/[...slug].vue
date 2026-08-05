@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const route = useRoute();
 const router = useRouter();
+const { getPostBySlug } = useBlog();
 
 const goBack = () => {
 	const previousLocation = window.history.state?.back;
@@ -20,11 +21,7 @@ const slugSegments = Array.isArray(slugParam)
 		? [slugParam]
 		: [];
 
-const blogContentPath = `/blog/${slugSegments.join('/')}`;
-
-const { data: blogPost } = await useAsyncData(`blogPost:${blogContentPath}`, () =>
-	queryCollection('content').path(blogContentPath).first()
-);
+const { data: blogPost } = await getPostBySlug(slugSegments.join('/'));
 </script>
 
 <template>

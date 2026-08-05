@@ -15,13 +15,15 @@
 	);
 
 	const { getAllPosts } = useBlog();
-	const allBlogPosts = await getAllPosts();
+	const { data: allBlogPosts } = await getAllPosts();
 
-	const blogPostList = computed(() =>
-		props.limit === undefined
-			? allBlogPosts
-			: allBlogPosts.slice(0, Math.max(0, props.limit))
-	);
+	const blogPostList = computed(() => {
+		const posts = allBlogPosts.value ?? [];
+
+		return props.limit === undefined
+			? posts
+			: posts.slice(0, Math.max(0, props.limit));
+	});
 
 	const articleHeadingLevel = computed(() =>
 		props.headingLevel === 'h1' ? 'h2' : 'h3'
