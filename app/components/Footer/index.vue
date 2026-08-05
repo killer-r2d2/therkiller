@@ -25,6 +25,12 @@
 						Colophon
 					</NuxtLink>
 					<NuxtLink
+						to="/styleguide"
+						class="text-base text-foreground transition-colors duration-200 hover:text-accent motion-reduce:transition-none lg:text-base"
+					>
+						Styleguide
+					</NuxtLink>
+					<NuxtLink
 						to="/privacy"
 						class="text-base text-foreground transition-colors duration-200 hover:text-accent motion-reduce:transition-none lg:text-base"
 					>
