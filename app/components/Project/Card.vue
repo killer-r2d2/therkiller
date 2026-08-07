@@ -27,7 +27,7 @@
 			target="_blank"
 			rel="noopener noreferrer"
 			:aria-label="`Visit ${project.title} (opens in a new tab)`"
-			class="group flex h-full flex-col py-6 no-underline md:py-7"
+			class="group flex h-full flex-col pt-3 pb-6 no-underline md:pt-4 md:pb-7"
 		>
 			<div class="flex items-center justify-between gap-6">
 				<p
