@@ -50,7 +50,7 @@
 			<div>
 				<component
 					:is="headingLevel"
-					class="mt-2 text-2xl leading-tight font-bold tracking-tight transition-colors duration-200 group-hover:text-accent motion-reduce:transition-none"
+					class="mt-2 transition-colors duration-200 group-hover:text-accent motion-reduce:transition-none"
 				>
 					{{ project.title }}
 				</component>
