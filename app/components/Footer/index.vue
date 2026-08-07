@@ -13,6 +13,12 @@
 					class="mb-6 flex flex-wrap justify-center gap-x-6 gap-y-3"
 				>
 					<NuxtLink
+						to="/projects"
+						class="text-base text-foreground transition-colors duration-200 hover:text-accent motion-reduce:transition-none lg:text-base"
+					>
+						Projects
+					</NuxtLink>
+					<NuxtLink
 						to="/blog"
 						class="text-base text-foreground transition-colors duration-200 hover:text-accent motion-reduce:transition-none lg:text-base"
 					>

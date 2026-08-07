@@ -8,6 +8,12 @@
 				:limit="5"
 				show-all-link
 			/>
+			<LazyProjectList
+				heading="Selected projects"
+				description="Recent websites built with Kirby CMS, Nuxt, Strapi, and Tailwind CSS."
+				:limit="3"
+				show-all-link
+			/>
 			<LazyLogoCollection />
 		</div>
 	</main>

@@ -21,9 +21,13 @@ export default defineContentConfig({
 					})
 					.optional(),
 				tags: z.string().optional(),
+
+				// Projects (content/projects/*.md)
+				url: z.string().url().optional(),
+				technologies: z.array(z.string()).optional(),
+				projectOrder: z.number().int().positive().optional(),
 			}),
 		}),
 	},
 });
-
 

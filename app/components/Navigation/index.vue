@@ -5,7 +5,10 @@
 	const mobileMenuButton = ref<HTMLButtonElement | null>(null);
 	const mobileMenuCloseButton = ref<HTMLButtonElement | null>(null);
 
-	const navigationItems = [{ label: 'Blog', to: '/blog' }];
+	const navigationItems = [
+		{ label: 'Projects', to: '/projects' },
+		{ label: 'Blog', to: '/blog' },
+	];
 
 	const openMobileMenu = () => {
 		isMobileMenuOpen.value = true;
@@ -65,7 +68,7 @@
 			>
 				therkiller.dev
 			</NuxtLink>
-			<ul class="hidden items-center md:flex">
+			<ul class="hidden items-center gap-8 md:flex">
 				<li v-for="navigationItem in navigationItems" :key="navigationItem.to">
 					<NuxtLink
 						:to="navigationItem.to"
