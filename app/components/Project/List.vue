@@ -40,7 +40,7 @@
 				<p class="mt-3 text-muted md:text-xl">{{ description }}</p>
 			</header>
 
-			<ul class="grid gap-x-8 md:grid-cols-2 xl:grid-cols-3">
+			<ul class="grid gap-x-8 md:grid-cols-2 xl:max-w-6xl xl:grid-cols-3">
 				<li v-for="project in projectList" :key="project.path">
 					<ProjectCard
 						:project="project"
