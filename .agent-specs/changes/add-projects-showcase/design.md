@@ -33,7 +33,7 @@ projectOrder: positive integer
 
 ## UI And Content
 
-Projects use a restrained editorial grid inspired by the supplied Tailwind UI three-column reference. Each entry has a fine top divider, project name, visible hostname, technology pills, and a small external-link indicator. There are no dates, descriptions, sequence numbers, images, or decorative backgrounds.
+Projects use a restrained editorial grid inspired by the supplied Tailwind UI three-column reference. Each entry has a fine top divider, project name, visible hostname, a comma-separated technology line styled like the blog tags, and a small external-link indicator. There are no dates, descriptions, sequence numbers, images, or decorative backgrounds.
 
 The grid is one column on small screens, two columns from the medium breakpoint, and three columns on large screens. Every project has equal visual weight. Hover feedback is limited to subtle accent-color and arrow movement. Homepage and index use the same component, keeping the three-item preview consistent with the complete collection.
 

@@ -63,19 +63,12 @@
 				>
 					{{ project.title }}
 				</component>
-				<ul
+				<p
 					v-if="project.technologies?.length"
-					class="mt-3 flex flex-wrap gap-1.5"
-					aria-label="Technologies"
+					class="text-xs text-muted"
 				>
-					<li
-						v-for="technology in project.technologies"
-						:key="technology"
-						class="rounded-full border border-border bg-surface px-2.5 py-0.5 text-xs text-muted lg:text-sm"
-					>
-						{{ technology }}
-					</li>
-				</ul>
+					{{ project.technologies.join(', ') }}
+				</p>
 			</div>
 		</a>
 	</article>
