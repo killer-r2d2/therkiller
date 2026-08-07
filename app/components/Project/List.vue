@@ -28,19 +28,13 @@
 	const cardHeadingLevel = computed(() =>
 		props.headingLevel === 'h1' ? 'h2' : 'h3'
 	);
-
-	const headingClasses = computed(() =>
-		props.headingLevel === 'h1'
-			? 'text-3xl font-bold tracking-tight md:text-5xl'
-			: 'font-sans text-2xl'
-	);
 </script>
 
 <template>
 	<BaseSection>
 		<BaseContainer>
 			<header class="mb-10 max-w-3xl md:mb-14">
-				<component :is="headingLevel" :class="headingClasses">
+				<component :is="headingLevel" class="font-sans text-2xl">
 					{{ heading }}
 				</component>
 				<p class="mt-4 text-muted md:text-xl">{{ description }}</p>
