@@ -18,12 +18,6 @@
 
 		return new URL(props.project.url).hostname.replace(/^www\./, '');
 	});
-
-	const headingClasses = computed(() =>
-		props.headingLevel === 'h3'
-			? undefined
-			: 'text-2xl leading-tight font-bold tracking-tight'
-	);
 </script>
 
 <template>
@@ -56,10 +50,7 @@
 			<div>
 				<component
 					:is="headingLevel"
-					:class="[
-						'mt-2 transition-colors duration-200 group-hover:text-accent motion-reduce:transition-none',
-						headingClasses,
-					]"
+					class="mt-2 transition-colors duration-200 group-hover:text-accent motion-reduce:transition-none"
 				>
 					{{ project.title }}
 				</component>
