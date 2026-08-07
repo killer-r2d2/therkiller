@@ -27,7 +27,7 @@
 			target="_blank"
 			rel="noopener noreferrer"
 			:aria-label="`Visit ${project.title} (opens in a new tab)`"
-			class="group flex h-full min-h-64 flex-col py-7 no-underline md:py-8"
+			class="group flex h-full flex-col py-6 no-underline md:py-7"
 		>
 			<div class="flex items-center justify-between gap-6">
 				<p
@@ -38,20 +38,25 @@
 				<span
 					class="flex h-11 w-11 shrink-0 items-center justify-center text-muted transition duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent motion-reduce:transition-none"
 				>
-					<Icon name="lucide:arrow-up-right" size="20" aria-hidden="true" />
+					<Icon
+						name="lucide:arrow-right"
+						size="20"
+						class="-rotate-45"
+						aria-hidden="true"
+					/>
 				</span>
 			</div>
 
-			<div class="flex flex-1 flex-col">
+			<div>
 				<component
 					:is="headingLevel"
-					class="mt-5 text-2xl leading-tight font-bold tracking-tight transition-colors duration-200 group-hover:text-accent motion-reduce:transition-none"
+					class="mt-4 text-2xl leading-tight font-bold tracking-tight transition-colors duration-200 group-hover:text-accent motion-reduce:transition-none"
 				>
 					{{ project.title }}
 				</component>
 				<ul
 					v-if="project.technologies?.length"
-					class="mt-auto flex flex-wrap gap-2 pt-10"
+					class="mt-5 flex flex-wrap gap-2"
 					aria-label="Technologies"
 				>
 					<li
