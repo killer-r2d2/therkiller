@@ -1,7 +1,9 @@
 .git
+.agent-specs
 .planning
 
 node_modules
+.pnpm-store
 .nuxt
 .output
 .data

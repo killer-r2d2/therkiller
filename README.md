@@ -13,20 +13,20 @@ Personal portfolio and blog built as a statically generated Nuxt application.
 ## Requirements
 
 - Node.js 22
-- npm 10.9.8
+- pnpm 11.22.0
 
 ## Setup
 
 Install the locked dependencies:
 
 ```bash
-npm ci
+pnpm install --frozen-lockfile
 ```
 
 Start the development server at `http://localhost:3000`:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 ## Verification
@@ -44,7 +44,7 @@ The script runs ESLint and generates the static production site. No automated te
 Generate the static site in `.output/public`:
 
 ```bash
-npm run generate
+pnpm run generate
 ```
 
 The included `Dockerfile` builds the application and serves the generated files with Nginx.
