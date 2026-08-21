@@ -3,13 +3,13 @@ FROM node:22-alpine AS build
 
 WORKDIR /app
 
-RUN npm install --global npm@10.9.8
+RUN npm install --global pnpm@11.22.0
 
-COPY package.json package-lock.json ./
-RUN npm ci
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+RUN pnpm install --frozen-lockfile
 
 COPY . .
-RUN npm run generate
+RUN pnpm run generate
 
 # Production stage
 FROM nginx:alpine

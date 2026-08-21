@@ -2,11 +2,11 @@
 set -euo pipefail
 
 echo "Running lint..."
-npm run lint
+pnpm run lint
 
 echo "Automated tests are not configured; continuing with the static production build gate."
 
 echo "Running static production build..."
-npm run generate
+pnpm run generate
 
 echo "All checks passed."

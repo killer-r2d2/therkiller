@@ -126,7 +126,7 @@ Preferred edit areas:
 
 Protected or high-risk areas:
 
-- `package-lock.json`: update only through npm commands and review dependency churn.
+- `pnpm-lock.yaml`: update only through pnpm commands and review dependency churn.
 - `Dockerfile` and `nginx.conf`: changes affect production builds and delivery.
 - `.env` files and credentials: never commit real secrets.
 - `public/fonts/` and large binary assets: avoid unrelated replacements or normalization.
@@ -134,7 +134,8 @@ Protected or high-risk areas:
 Generated or normalized files:
 
 - `.nuxt/`, `.output/`, `.data/`, `.nitro/`, `.cache/`, `dist/`, and `node_modules/` are generated and must not be edited or committed.
-- `package-lock.json` is npm-managed but committed and must stay synchronized with `package.json`.
+- `pnpm-lock.yaml` is pnpm-managed but committed and must stay synchronized with `package.json`.
+- `.pnpm-store/` is generated local cache data and must not be edited or committed.
 
 Content or data directories:
 
@@ -155,11 +156,11 @@ Content or data directories:
 Do not run commands unless they are needed for the current task or the user asks for them.
 
 ```bash
-npm ci
-npm run dev
-npm run lint
-npm run generate
-npm test  # Placeholder only; no automated test suite is configured yet.
+pnpm install --frozen-lockfile
+pnpm run dev
+pnpm run lint
+pnpm run generate
+pnpm test  # Placeholder only; no automated test suite is configured yet.
 ```
 
 Run `scripts/verify.sh` before declaring work done. Until an automated test suite is added, lint and static generation are the required executable gates.
@@ -167,8 +168,8 @@ Run `scripts/verify.sh` before declaring work done. Until an automated test suit
 ## Testing
 
 - Tests live in: no automated test directory is configured yet.
-- Test command: `npm test` is currently a placeholder and does not count as verification.
-- Required verification: `npm run lint` and `npm run generate`.
+- Test command: `pnpm test` is currently a placeholder and does not count as verification.
+- Required verification: `pnpm run lint` and `pnpm run generate`.
 - If tests are expensive or require external services, state that clearly before running them.
 - If a test cannot be run, include the reason in the final verification notes.
 
