@@ -16,6 +16,6 @@
 
 ## Content And Delivery
 
-- [x] T009 Add `content/blog/migrating-from-npm-to-pnpm.md` with repository-backed measurements, security boundaries, migration notes, and references.
+- [x] T009 Add `content/blog/migrating-from-npm-to-pnpm.md` with a concise account of development speed, local storage, dependency clarity, and the unchanged deployment size.
 - [x] T010 Verify the generated article route and review every numerical claim against captured results.
 - [x] T011 Run spec verification, ZOMBIES review, PR readiness, and the ship workflow; then commit, push, and prepare the manual pull-request handoff.

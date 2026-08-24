@@ -2,20 +2,20 @@
 
 ## Summary
 
-Migrate therkiller.dev from npm to pnpm without changing application behavior or dependency versions, then publish an English blog post that explains the practical security and storage effects using measurements from this repository.
+Migrate therkiller.dev from npm to pnpm without changing application behavior or dependency versions, then publish a concise English blog post about development speed, local storage, and a clearer dependency layout.
 
 ## Problem
 
 The project currently uses npm across local development, verification, Docker builds, documentation, and repository instructions. This works, but it duplicates dependency files across local projects, permits dependency lifecycle scripts under the current defaults, and produces a large JSON lockfile that is difficult to review.
 
-The initial idea that pnpm makes the application "safer and smaller" is too broad. The migration needs to distinguish safer dependency installation from runtime security, and reduced development storage from the size of the generated website or production image.
+The initial idea that pnpm makes the application "safer and smaller" focuses on the wrong outcome. The migration should improve the local development workflow through package reuse, less duplicated storage, and dependency boundaries that expose undeclared packages. The article needs to explain those benefits without implying that the generated website becomes smaller.
 
 ## Users And Scenarios
 
 - The maintainer installs and updates dependencies across multiple Node.js projects and wants less duplicated storage and faster repeated installs.
 - Contributors need one pinned package-manager version and reproducible local and Docker builds.
 - Reviewers need a readable lockfile and evidence that the migration did not silently change the application.
-- Blog readers want an honest, measured account of what pnpm improves and what it does not improve.
+- Blog readers want a short, approachable account of what pnpm improves in everyday development.
 
 ## Scope
 
@@ -25,7 +25,7 @@ The initial idea that pnpm makes the application "safer and smaller" is too broa
 - Replace active npm commands in project scripts, Docker, README, and agent instructions with pnpm equivalents.
 - Preserve the statically generated Nuxt application and Nginx production stage.
 - Capture comparable npm and pnpm measurements for dependency storage, lockfile size, generated output, installation behavior, and Docker image output when available.
-- Publish an English blog post describing the motivation, migration, measurements, security boundaries, and conclusion.
+- Publish a concise English blog post focused on development speed, local storage, clearer direct dependencies, and the unchanged deployment size.
 
 ## Not In Scope
 
@@ -45,7 +45,8 @@ The initial idea that pnpm makes the application "safer and smaller" is too broa
 - `pnpm run lint`, `pnpm run generate`, and `scripts/verify.sh` succeed.
 - The generated site still contains the existing routes and adds the new blog route.
 - The production Docker stage still contains only the generated site served by Nginx.
-- The blog post clearly separates install-time security, local dependency storage, generated-site size, and production-image size.
+- The blog post clearly explains the development-speed, local-storage, and dependency-clarity benefits without claiming that pnpm shrinks the deployed site.
+- The article stays approachable, concise, and light on implementation detail.
 - Every numerical comparison in the article comes from a recorded repository measurement.
 
 ## Open Questions

@@ -39,17 +39,15 @@ The package-management contract becomes:
 
 ## UI And Content
 
-The article remains English to match the existing site. It uses the established frontmatter fields and a first-person narrative. Its structure is:
+The article remains English to match the existing site. It uses the established frontmatter fields and a personal, first-person narrative. It stays concise and follows the maintainer's revised motivation:
 
-1. The original safer-and-smaller assumptions and the static deployment context.
-2. A controlled migration of this Nuxt repository.
-3. Before-and-after measurements.
-4. Security improvements and their limits.
-5. The difference between local, static, and server-rendered deployment size.
-6. A migration trap discovered during verification.
-7. Final recommendation.
+1. Faster day-to-day development through package reuse and earlier feedback.
+2. Less duplicated local storage, supported by the repository measurement.
+3. A clearer distinction between direct and transitive dependencies, illustrated by the ESLint issue found during migration.
+4. A short clarification that the generated site and production container remain effectively unchanged.
+5. A practical recommendation based on developer experience rather than deployment size.
 
-The article avoids presenting pnpm marketing claims as repository results and labels environmental or methodology limitations.
+Avoid lengthy setup instructions, exhaustive security-policy detail, speculative server-rendering comparisons, and marketing-style conclusions. Keep methodological caveats only where they prevent a misleading claim.
 
 ## Security And Privacy
 
