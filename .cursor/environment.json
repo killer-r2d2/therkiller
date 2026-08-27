@@ -1,0 +1,17 @@
+{
+	"name": "therkiller.dev",
+	"install": "pnpm install --frozen-lockfile",
+	"terminals": [
+		{
+			"name": "dev",
+			"command": "NUXT_TELEMETRY_DISABLED=1 NODE_OPTIONS=--no-deprecation pnpm exec nuxt dev",
+			"description": "Nuxt dev server on http://localhost:3000"
+		}
+	],
+	"ports": [
+		{
+			"name": "web",
+			"port": 3000
+		}
+	]
+}
