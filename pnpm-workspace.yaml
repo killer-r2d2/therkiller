@@ -3,6 +3,10 @@ minimumReleaseAgeStrict: true
 blockExoticSubdeps: true
 strictDepBuilds: true
 
+overrides:
+  # Typography pins vulnerable 6.x; remove when upstream includes GHSA-rj75-hqrm-r3gf's fix.
+  '@tailwindcss/typography>postcss-selector-parser': 7.1.6
+
 allowBuilds:
   better-sqlite3: true
   esbuild: true
