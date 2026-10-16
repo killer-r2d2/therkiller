@@ -12,7 +12,7 @@ Personal portfolio and blog built as a statically generated Nuxt application.
 
 ## Requirements
 
-- Node.js 22
+- Node.js 22.22.3+, 24.15.0+, or 26+ (supported by Nuxt 4.6)
 - pnpm 11.22.0
 
 ## Setup
