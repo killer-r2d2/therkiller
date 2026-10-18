@@ -40,8 +40,9 @@
 							<h2>Performance</h2>
 							<p>
 								Pages are generated as static files and served by nginx. Fonts
-								and images are hosted locally, and the site does not load
-								analytics, advertising, or social-media scripts.
+								and images are hosted locally. The Umami analytics script loads
+								with deferred execution. No advertising or social-media scripts
+								are loaded.
 							</p>
 						</section>
 
@@ -60,11 +61,11 @@
 						<section>
 							<h2>Privacy by design</h2>
 							<p>
-								There are no analytics, advertising trackers, or embedded
-								third-party widgets. Browser storage is limited to the selected
-								colour mode and a local cache of published site content; neither
-								is used to identify or track visitors. Details are available in
-								the
+								The site uses Umami for cookie-free website analytics. There are
+								no advertising trackers or embedded third-party widgets. Browser
+								storage is limited to the selected colour mode and a local cache
+								of published site content; neither is used to identify or track
+								visitors. Details are available in the
 								<NuxtLink to="/privacy">privacy notice.</NuxtLink>
 							</p>
 						</section>
