@@ -17,6 +17,15 @@ export default defineNuxtConfig({
 	},
 
 	app: {
+		head: {
+			script: [
+				{
+					defer: true,
+					src: 'https://umami.therkiller.dev/script.js',
+					'data-website-id': 'b6fb3b6a-95e9-42e3-8fb9-f7cd44579e00',
+				},
+			],
+		},
 		pageTransition: {
 			name: 'page',
 			mode: 'out-in',

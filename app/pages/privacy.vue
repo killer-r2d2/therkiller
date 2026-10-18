@@ -17,7 +17,7 @@
 							This notice explains the limited personal data processed when you
 							visit therkiller.dev.
 						</p>
-						<p class="mt-4 text-muted">Last updated: 5 August 2026</p>
+						<p class="mt-4 text-muted">Last updated: 18 October 2026</p>
 					</header>
 
 					<div
@@ -48,6 +48,20 @@
 								operation, and investigate misuse or security incidents. It is
 								not used for visitor analytics or profiling and is retained only
 								for as long as operational or security purposes require it.
+							</p>
+						</section>
+
+						<section>
+							<h2>Website analytics</h2>
+							<p>
+								This website uses Umami at umami.therkiller.dev to understand
+								how the site is used. The tracker sends page views, page and
+								referrer URLs, and browser, operating-system, device, and
+								language information to this analytics service.
+							</p>
+							<p>
+								Umami does not use cookies. This website does not configure
+								custom events or send account identifiers to Umami.
 							</p>
 						</section>
 
