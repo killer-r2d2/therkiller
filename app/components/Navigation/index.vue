@@ -8,6 +8,7 @@
 	const navigationItems = [
 		{ label: 'Projects', to: '/projects' },
 		{ label: 'Blog', to: '/blog' },
+		{ label: 'About', to: '/about' },
 	];
 
 	const openMobileMenu = () => {
