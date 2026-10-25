@@ -5,6 +5,10 @@ export default defineNuxtConfig({
 	future: {
 		compatibilityVersion: 5,
 	},
+	experimental: {
+		// Content 3.15 and Image 2.1 still import server helpers from #imports.
+		nitroAutoImports: true,
+	},
 	nitro: {
 		// Static generation is used to pre-render your pages as static HTML files. This can greatly improve the performance and SEO of your website.
 		static: true,
