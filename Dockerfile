@@ -12,7 +12,7 @@ COPY . .
 RUN pnpm run generate
 
 # Production stage
-FROM nginx:alpine
+FROM nginx:1.31.9-alpine
 
 COPY --from=build /app/.output/public /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
