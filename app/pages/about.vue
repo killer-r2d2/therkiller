@@ -177,7 +177,7 @@
 
 	.about-divider[data-reveal] {
 		transform: scaleX(0);
-		transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+		transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
 	}
 
 	.about-divider[data-reveal].is-visible {

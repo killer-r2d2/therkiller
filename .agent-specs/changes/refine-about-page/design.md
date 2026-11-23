@@ -20,7 +20,7 @@ The initial implementation had an oversized hero. The user requested subtler sty
 
 ## Divider Motion
 
-Use four decorative 1px lines with a left transform origin and a 650ms scaleX transition. Set up a native IntersectionObserver after mounting, reveal each line once 24px inside the viewport, and unobserve it afterward. Disconnect the observer on unmount. Default lines remain visible without JavaScript or observer support. Skip observer setup for reduced motion and provide a CSS reduced-motion override so preference changes also reveal lines immediately. Do not animate content or change layout dimensions.
+Use four decorative 1px lines with a left transform origin and a 1.5s scaleX transition, slowed at the user's request. Set up a native IntersectionObserver after mounting, reveal each line once 24px inside the viewport, and unobserve it afterward. Disconnect the observer on unmount. Default lines remain visible without JavaScript or observer support. Skip observer setup for reduced motion and provide a CSS reduced-motion override so preference changes also reveal lines immediately. Do not animate content or change layout dimensions.
 
 ## Security And Privacy
 
