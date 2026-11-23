@@ -16,7 +16,7 @@ Keep `/about` and its SEO title. No data fetching or new dependencies.
 
 Keep the About h1 at `text-2xl` and every h2 at `text-xl`, so the heading hierarchy is visually clear at every breakpoint.
 
-Introduce Roger in one text column. A brief first-person reflection on curiosity sits beside a fine vertical rule. Retain the approved work section and technology list, writing section, and contact section, with `SocialLinks` immediately below the contact paragraph. Keep English copy supported by existing repository content; avoid unverifiable personal claims. Use one h1, descriptive h2 headings and links, and the existing focus styles.
+Introduce Roger in one text column. A brief first-person reflection on curiosity appears as a plain paragraph. Retain the approved work section and technology list, writing section, and contact section, with `SocialLinks` immediately below the contact paragraph. Keep English copy supported by existing repository content; avoid unverifiable personal claims. Use one h1, descriptive h2 headings and links, and the existing focus styles.
 
 The initial implementation had an oversized hero. The user requested subtler styling and less text, then clarified that the original text sections were good. The final design retains those sections while making the introduction small and quiet. The user also explicitly requested replacing the standalone LinkedIn contact link with the same GitHub, Bluesky, and LinkedIn icons used on the homepage, and animating the section dividers as they become visible.
 
