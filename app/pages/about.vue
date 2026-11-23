@@ -43,48 +43,18 @@
 	<main>
 		<BaseSection class="mt-0 mb-12 md:mt-0 md:mb-16 lg:mt-0 lg:mb-20">
 			<BaseContainer>
-				<div class="grid gap-8 md:grid-cols-12">
-					<header class="md:col-span-4">
-						<h1 class="font-sans text-2xl">About</h1>
-					</header>
-
-					<div class="min-w-0 md:col-span-6 md:col-start-7">
-						<div class="mb-6 flex items-center gap-4">
-							<img
-								src="/roger-killer.jpg"
-								alt="Portrait of Roger Killer"
-								width="1651"
-								height="1102"
-								class="size-14 shrink-0 rounded-full object-cover"
-							>
-							<h2 class="font-sans text-xl">I’m Roger. I build for the web.</h2>
-						</div>
-
-						<p class="leading-relaxed">
-							I’m a Full Stack Developer at
-							<a
-								href="https://www.brueggli-admedia.ch/"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="text-accent"
-							>
-								Brüggli Admedia
-								<span class="sr-only">(opens in a new tab)</span>
-							</a>
-							, working across interfaces, content systems, and the APIs that
-							connect them.
-						</p>
-						<p class="mt-4 leading-relaxed">
-							You’ll find my
-							<NuxtLink to="/projects" class="text-accent">projects</NuxtLink>
-							and
-							<NuxtLink to="/blog" class="text-accent">
-								development notes
-							</NuxtLink>
-							here.
+				<header class="max-w-prose">
+					<h1 class="text-2xl">About Roger Killer</h1>
+					<div class="mt-6 border-s-2 border-border ps-5">
+						<h2 class="font-serif text-xl">Who updates the website after launch?</h2>
+						<p class="mt-3 leading-relaxed">
+							That’s a question I like to ask early. For
+							<NuxtLink to="/blog/dental-care-goes-headless" class="text-accent">Zahnarztpraxis Alpstein</NuxtLink>,
+							it was the practice team. We set up Strapi so the staff could edit
+						their own service pages.
 						</p>
 					</div>
-				</div>
+				</header>
 			</BaseContainer>
 		</BaseSection>
 		<BaseSection class="my-12 md:my-16 lg:my-20">
