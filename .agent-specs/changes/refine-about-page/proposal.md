@@ -2,7 +2,7 @@
 
 ## Summary
 
-Give the existing About page a subtle introduction, useful work and writing sections, the same social contact icons as the homepage, and gentle scroll-revealed section dividers.
+Give the existing About page work and writing sections, the same social contact icons as the homepage, and gentle scroll-revealed section dividers.
 
 ## Problem
 
@@ -15,8 +15,7 @@ Portfolio visitors want to understand who Roger is, what he builds, and where to
 ## Scope
 
 - Improve `/about` on the existing About feature branch, continuing the user's current-branch session.
-- Open with a short personal reflection using the site typography and theme colors.
-- Keep the page subtle and compact: modest headings and a short opening paragraph, following the user's visual feedback.
+- Open with the About heading followed directly by the work section.
 - Write English first-person copy grounded in the homepage, projects, and blog.
 - Reuse the homepage's GitHub, Bluesky, and LinkedIn icons below the contact paragraph, as explicitly requested.
 - Preserve the original work, writing, and contact text sections, as clarified by the user after the compact preview.
@@ -30,10 +29,10 @@ Portfolio visitors want to understand who Roger is, what he builds, and where to
 
 ## Success Criteria
 
-- The page has a short personal introduction about curiosity, the approved work and writing sections, and the requested contact paragraph followed by the shared social icons.
+- The page has the approved work and writing sections, and the requested contact paragraph followed by the shared social icons.
 - Section dividers reveal once from left to right on entering the viewport; content remains readable with reduced motion, missing observer support, or no JavaScript.
 - It is readable without horizontal overflow on narrow screens and in both color modes.
-- The page heading reads “About”. The opening is personal and free of website or project references.
+- The page heading reads “About”.
 - SEO describes the revised page; lint and static generation pass.
 
 ## Open Questions

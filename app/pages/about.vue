@@ -43,14 +43,7 @@
 	<main>
 		<BaseSection class="mt-0 mb-12 md:mt-0 md:mb-16 lg:mt-0 lg:mb-20">
 			<BaseContainer>
-				<header class="max-w-prose">
-					<h1 class="text-2xl">About</h1>
-					<p class="mt-6 leading-relaxed">
-						I like the kind of conversation we can pick up again a week later.
-						Chances are I’m still thinking about something you said, and I’ve
-						got another question for you.
-					</p>
-				</header>
+				<h1 class="text-2xl">About</h1>
 			</BaseContainer>
 		</BaseSection>
 		<BaseSection class="my-12 md:my-16 lg:my-20">
