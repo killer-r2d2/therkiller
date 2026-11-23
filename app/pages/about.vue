@@ -45,16 +45,10 @@
 			<BaseContainer>
 				<header class="max-w-prose">
 					<h1 class="text-2xl">About</h1>
-					<div class="mt-6 border-s-2 border-border ps-5">
-						<h2 class="font-serif text-xl">Who makes the next edit?</h2>
-						<p class="mt-3 leading-relaxed">
-							When I build a website, I think about the person who’ll open the
-							editor after launch. At
-							<NuxtLink to="/blog/dental-care-goes-headless" class="text-accent">Zahnarztpraxis Alpstein</NuxtLink>,
-							the practice team can update a treatment description and publish
-							the change themselves.
-						</p>
-					</div>
+					<p class="mt-6 border-s-2 border-border ps-5 leading-relaxed">
+						I like hearing how people figure things out. My favourite part of
+						the story is usually the first guess that turned out to be wrong.
+					</p>
 				</header>
 			</BaseContainer>
 		</BaseSection>
