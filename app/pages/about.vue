@@ -95,7 +95,7 @@
 						aria-labelledby="work-heading"
 						class="grid gap-6 py-10 md:grid-cols-12 md:gap-8 md:py-14"
 					>
-						<h2 id="work-heading" class="font-sans text-2xl md:col-span-4">
+						<h2 id="work-heading" class="font-sans text-xl md:col-span-4">
 							What I work on
 						</h2>
 						<div class="min-w-0 md:col-span-7 md:col-start-6">
@@ -126,7 +126,7 @@
 						aria-labelledby="writing-heading"
 						class="grid gap-6 py-10 md:grid-cols-12 md:gap-8 md:py-14"
 					>
-						<h2 id="writing-heading" class="font-sans text-2xl md:col-span-4">
+						<h2 id="writing-heading" class="font-sans text-xl md:col-span-4">
 							Learning, then writing it down
 						</h2>
 						<div class="min-w-0 md:col-span-7 md:col-start-6">
@@ -149,7 +149,7 @@
 						aria-labelledby="contact-heading"
 						class="grid gap-6 py-10 md:grid-cols-12 md:gap-8 md:py-14"
 					>
-						<h2 id="contact-heading" class="font-sans text-2xl md:col-span-4">
+						<h2 id="contact-heading" class="font-sans text-xl md:col-span-4">
 							Let’s talk web
 						</h2>
 						<div class="min-w-0 md:col-span-7 md:col-start-6">

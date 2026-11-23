@@ -14,6 +14,8 @@ Keep `/about` and its SEO title. Reuse `/roger-killer.jpg` with intrinsic dimens
 
 ## UI And Content
 
+Keep the About h1 at `text-2xl` and every h2 at `text-xl`, so the heading hierarchy is visually clear at every breakpoint.
+
 Use the site's existing editorial layout: an About heading on the left and a compact introduction on the right, stacked on mobile. Enable the 12-column grid only at the medium breakpoint so fixed grid gaps cannot overflow narrow screens. Put a small circular portrait beside a restrained h2, followed by one brief professional paragraph and inline project/blog links. Retain the approved work section and technology list, writing section, and contact section, with `SocialLinks` immediately below the contact paragraph. Keep English copy supported by existing repository content; avoid unverifiable personal claims. Use one h1, descriptive h2 headings and links, and the existing focus styles.
 
 The initial implementation had an oversized hero. The user requested subtler styling and less text, then clarified that the original text sections were good. The final design retains those sections while making the introduction small and quiet. The user also explicitly requested replacing the standalone LinkedIn contact link with the same GitHub, Bluesky, and LinkedIn icons used on the homepage, and animating the section dividers as they become visible.
