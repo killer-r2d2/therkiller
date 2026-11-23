@@ -46,8 +46,9 @@
 				<header class="max-w-prose">
 					<h1 class="text-2xl">About</h1>
 					<p class="mt-6 border-s-2 border-border ps-5 leading-relaxed">
-						I like hearing how people figure things out. My favourite part of
-						the story is usually the first guess that turned out to be wrong.
+						I like the kind of conversation we can pick up again a week later.
+						Chances are I’m still thinking about something you said, and I’ve
+						got another question for you.
 					</p>
 				</header>
 			</BaseContainer>
