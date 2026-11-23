@@ -44,14 +44,15 @@
 		<BaseSection class="mt-0 mb-12 md:mt-0 md:mb-16 lg:mt-0 lg:mb-20">
 			<BaseContainer>
 				<header class="max-w-prose">
-					<h1 class="text-2xl">About Roger Killer</h1>
+					<h1 class="text-2xl">About</h1>
 					<div class="mt-6 border-s-2 border-border ps-5">
-						<h2 class="font-serif text-xl">Who updates the website after launch?</h2>
+						<h2 class="font-serif text-xl">Who makes the next edit?</h2>
 						<p class="mt-3 leading-relaxed">
-							That’s a question I like to ask early. For
+							When I build a website, I think about the person who’ll open the
+							editor after launch. At
 							<NuxtLink to="/blog/dental-care-goes-headless" class="text-accent">Zahnarztpraxis Alpstein</NuxtLink>,
-							it was the practice team. We set up Strapi so the staff could edit
-						their own service pages.
+							the practice team can update a treatment description and publish
+							the change themselves.
 						</p>
 					</div>
 				</header>
